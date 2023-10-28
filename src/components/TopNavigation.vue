@@ -13,7 +13,7 @@
 
 <template>
 	<div
-		class="top-nav fixed top-0 left-0 w-full h-16"
+		class="top-nav fixed top-0 left-0 w-full h-16 font-oswald"
 	>
 		<nav class="flex justify-between items-center h-full mx-[50px]">
 			<div class="nav-left">

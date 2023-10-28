@@ -10,7 +10,7 @@
 </script>
 
 <template>
-	<div class="home bg-modernBlack h-screen font-oswald tracking-wide">
+	<div class="home bg-sky-950 h-screen">
 		<TopNavigation />
 		<main class="container mx-auto">
 			<section class="flex flex-col h-screen items-center justify-center">
