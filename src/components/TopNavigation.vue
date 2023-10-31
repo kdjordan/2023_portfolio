@@ -25,9 +25,9 @@
 			<div class="nav-right">
 				<ul class="flex gap-4 text-highGreen text-md uppercase">
 					<li><router-link to="/"></router-link></li>
-					<li><font-awesome-icon icon="fa-solid fa-at" /></li>
-					<li><font-awesome-icon icon="fa-brands fa-github" /></li>
-					<li><font-awesome-icon icon="fa-brands fa-linkedin" /></li>
+					<li><font-awesome-icon icon="fa-solid fa-at" size="xl"/></li>
+					<li><font-awesome-icon icon="fa-brands fa-github" size="xl"/></li>
+					<li><font-awesome-icon icon="fa-brands fa-linkedin" size="xl"/></li>
 				</ul>
 			</div>
 		</nav>
