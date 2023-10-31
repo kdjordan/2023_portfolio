@@ -6,16 +6,19 @@
 
 
 	onMounted(() => {
-		const tl = gsap.timeline();
-		tl.set('.top-nav', { opacity: 0, borderBottom: 'none' });
-		tl.to('.top-nav', { delay: 2, opacity: 1, duration: 1 });
-		tl.to('.top-nav', { borderBottom: '1px solid #9FF279' });
+		let flag: boolean = false;
+		if(flag) {
+			const tl = gsap.timeline();
+			tl.set('.top-nav', { opacity: 0, borderBottom: 'none' });
+			tl.to('.top-nav', { delay: 2, opacity: 1, duration: 1 });
+			tl.to('.top-nav', { borderBottom: '1px solid #9FF279' });
+		}
 	});
 </script>
 
 <template>
-	<div class="top-nav fixed top-0 left-0 w-full h-16 font-oswald">
-		<nav class="flex justify-between items-center h-full mx-[50px]">
+	<div class="top-nav fixed top-0 left-0 w-full h-16 font-oswald border-b border-highGreen">
+		<nav class="flex justify-between items-center h-full mx-[20px]">
 			<div class="nav-left">
 				<Name />
 			</div>

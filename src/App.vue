@@ -4,8 +4,12 @@
 	import { gsap } from 'gsap/gsap-core';
 	
 	onMounted(() => {
-  gsap.set('.home', { opacity: 0, y: -2000 });
-  gsap.to('.home', { opacity: 1, y: 0, duration: 2 });
+		let flag: boolean = false;
+		if(flag) {
+			gsap.set('.home', { opacity: 0, y: -2000 });
+			gsap.to('.home', { opacity: 1, y: 0, duration: 2 });
+		}
+
 });
 </script>
 
