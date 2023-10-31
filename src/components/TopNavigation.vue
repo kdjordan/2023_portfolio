@@ -25,9 +25,9 @@
 			<div class="nav-right">
 				<ul class="flex gap-4 text-highGreen text-md uppercase">
 					<li><router-link to="/"></router-link></li>
-					<li><font-awesome-icon icon="fa-solid fa-at" size="xl"/></li>
-					<li><font-awesome-icon icon="fa-brands fa-github" size="xl"/></li>
-					<li><font-awesome-icon icon="fa-brands fa-linkedin" size="xl"/></li>
+					<li><a href="https://github.com/kdjordan" target="_blank" rel="noopener noreferrer"><font-awesome-icon icon="fa-brands fa-github" size="xl"/></a></li>
+					<li><a href="https://www.linkedin.com/in/kevin-dean-jordan/" target="_blank" rel="noopener noreferrer"><font-awesome-icon icon="fa-brands fa-linkedin" size="xl"/></a></li>
+					<!-- <li><a href="https://github.com/kdjordan"><font-awesome-icon icon="fa-solid fa-at" size="xl"/></a></li> -->
 				</ul>
 			</div>
 		</nav>

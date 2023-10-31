@@ -2,7 +2,7 @@
 	<div
 		class="flex flex-col text-stone-300 text-2xl px-4 pb-[25vh] gap-[20px]"
 	>
-		<div class="text-stone-300 text-lg">Hi there, I am</div>
+		<div class="text-stone-300 text-lg">Hello 👋 my name is</div>
 		<h1 class="text-clampLarge text-highGreen">Kevin Jordan.</h1>
 
 		<div class="text-lg gradient-text">
