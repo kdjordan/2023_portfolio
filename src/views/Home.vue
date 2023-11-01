@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="flex flex-col text-stone-300 text-2xl px-4 pb-[25vh] gap-[20px]"
+		class="flex flex-col text-stone-300 text-2xl px-4 pb-[25vh] gap-[20px] md:gap-[40px] lg:max-w-[750px] lg:mx-auto"
 	>
 		<div class="text-stone-300 text-lg">Hello 👋 my name is</div>
 		<h1 class="text-clampLarge text-highGreen">Kevin Jordan.</h1>
