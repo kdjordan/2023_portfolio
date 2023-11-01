@@ -1,4 +1,5 @@
 <template>
+	<section class="flex flex-col h-screen justify-center items-center pr-[20vw]">
 	<div
 		class="flex flex-col text-stone-300 text-2xl px-4 pb-[25vh] gap-[20px] md:gap-[40px] lg:max-w-[750px] lg:mx-auto"
 	>
@@ -18,6 +19,11 @@
 			Reach Out
 		</button>
 	</div>
+	</section>
+	<section>
+		<h2>about me</h2>
+	</section>
+	<!-- border border-2-highGreen  -->
 </template>
 <style scoped>
 	.gradient-text {
@@ -25,4 +31,5 @@
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
+	
 </style>

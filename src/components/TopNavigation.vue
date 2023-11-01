@@ -6,7 +6,7 @@
 	let dropOpen: boolean = false;
 
 	onMounted(() => {
-		let flag: boolean = false;
+		let flag: boolean = true;
 		if (flag) {
 			const tl = gsap.timeline();
 			tl.set('.top-nav', { opacity: 0, borderBottom: 'none' });
@@ -23,7 +23,7 @@
 
 <template>
 	<div
-		class="top-nav fixed top-0 left-0 w-full h-16 font-oswald border-b border-highGreen"
+		class="top-nav fixed top-0 left-0 w-full h-16 font-oswald border-b border-highGreen bg-sky-950"
 	>
 		<nav
 			class="flex justify-between items-center h-full mx-[20px] container mx-auto"
@@ -63,11 +63,10 @@
 				</ul>
 			</div>
 			<div
-				v-if="dropOpen"
 				class="absolute top-20 right-5 text-highGreen"
 			>
-				<ul>
-					<li class="py-4">
+				<ul v-if="dropOpen" class="flex flex-col gap-2">
+					<li>
 						<a
 							href="https://github.com/kdjordan"
 							target="_blank"
@@ -84,6 +83,16 @@
 							rel="noopener noreferrer"
 							><font-awesome-icon
 								icon="fa-brands fa-linkedin"
+								size="xl"
+						/></a>
+					</li>
+					<li>
+						<a
+							href="https://www.linkedin.com/in/kevin-dean-jordan/"
+							target="_blank"
+							rel="noopener noreferrer"
+							><font-awesome-icon
+								icon="fa-solid fa-envelope"
 								size="xl"
 						/></a>
 					</li>
