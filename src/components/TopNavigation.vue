@@ -3,8 +3,6 @@
 	import { gsap } from 'gsap';
 	import { onMounted } from 'vue';
 
-	let dropOpen: boolean = false;
-
 	onMounted(() => {
 		let flag: boolean = true;
 		if (flag) {
@@ -15,15 +13,11 @@
 		}
 	});
 
-	function toggleDropdown() {
-		dropOpen = !dropOpen;
-		console.log('toggled', dropOpen);
-	}
 </script>
 
 <template>
 	<div
-		class="top-nav fixed top-0 left-0 w-full h-16 font-oswald border-b border-highGreen bg-sky-950"
+		class="top-nav fixed top-0 left-0 w-full h-16 font-oswald border-b border-highGreen bg-sky-950 px-[10px]"
 	>
 		<nav
 			class="flex justify-between items-center h-full mx-[20px] container mx-auto"
@@ -32,11 +26,11 @@
 				<Name />
 			</div>
 			<div class="nav-right">
-				<ul class="flex gap-4 text-highGreen text-md uppercase">
+				<ul class="flex gap-4 text-highGreen text-md">
 					<li><router-link to="/"></router-link></li>
 					<li><a href="#about">about</a></li>
 					<li><a href="#about">experience</a></li>
-					<li><a href="#about">work</a></li>
+					<li><a href="#projects">projects</a></li>
 					<!-- <li>
 						<a
 							href="https://github.com/kdjordan"
@@ -57,15 +51,13 @@
 								size="xl"
 						/></a>
 					</li> -->
-					<li @click="toggleDropdown">
+					<!-- <li @click="toggleDropdown">
 						<font-awesome-icon icon="fa-solid fa-at" size="xl" />
-					</li>
+					</li> -->
 				</ul>
 			</div>
-			<div
-				class="absolute top-20 right-5 text-highGreen"
-			>
-				<ul v-if="dropOpen" class="flex flex-col gap-2">
+			<div class="absolute top-20 right-5 text-highGreen">
+				<!-- <ul v-if="dropOpen" class="flex flex-col gap-2">e
 					<li>
 						<a
 							href="https://github.com/kdjordan"
@@ -96,8 +88,14 @@
 								size="xl"
 						/></a>
 					</li>
-				</ul>
+				</ul> -->
 			</div>
 		</nav>
 	</div>
 </template>
+<style scoped>
+	li:hover {
+		color : #075985;
+		transition: all .5s ease;
+}
+</style>
