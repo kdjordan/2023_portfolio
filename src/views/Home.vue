@@ -7,7 +7,9 @@
 	const loaded = ref(false);
 
 	onMounted(() => {
-		loaded.value = false;
+		setTimeout(() => { 
+			loaded.value = true;
+		}, 6000)
 	});
 </script>
 <template>
@@ -16,7 +18,6 @@
 		<HomeAbout />
 		<HomeExperience />
 	</div>
-	}
 	<!-- border border-2-highGreen  -->
 </template>
 <style>

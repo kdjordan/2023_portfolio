@@ -7,7 +7,7 @@
 		let flag: boolean = true;
 		if (flag) {
 			gsap.set('.home', { opacity: 0, });
-			gsap.to('.home', { opacity: 1, duration: 2 });
+			gsap.to('.home', { opacity: 1, duration: 1, ease: 'power1.out', });
 
 			// setTimeout(() => {
 			// 	document.querySelector('.home').classList.add('dots');

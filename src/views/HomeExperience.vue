@@ -1,5 +1,5 @@
 <template>
-	<section id="about" class="pr-[5vw] lg:pr-[20vw] px-4">
+	<section id="experience" class="pr-[5vw] lg:pr-[20vw] px-4">
 			<div class="flex items-baseline text-2xl text-highGreen pb-[5vh]">
 				EXPERIENCE
 				<span class="block mb-[5px] ml-[10px] h-[1px] w-[200px] bg-highGreen opacity-40"></span>

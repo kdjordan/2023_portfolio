@@ -8,8 +8,8 @@
 		if (flag) {
 			const tl = gsap.timeline();
 			tl.set('.top-nav', { opacity: 0, borderBottom: 'none' });
-			tl.to('.top-nav', { delay: 2, opacity: 1, duration: 1 });
-			tl.to('.top-nav', { borderBottom: '1px solid #9FF279' });
+			tl.to('.top-nav', { delay: .5, opacity: 1, duration: 1 });
+			tl.to('.top-nav', { borderBottom: '1px solid #9FF279', duration: .25 });
 		}
 	});
 

@@ -6,21 +6,56 @@
 		let flag: boolean = true;
 		if (flag) {
 			const tl = gsap.timeline();
-			tl.set(['#copy', 'button'], { opacity: 0, y:100 });
-			tl.to('#copy', { delay: 3.5, opacity: 1, duration: 2, ease: "power1.out",  y:0});
-			tl.to('button', {  opacity: 1, duration: 1, ease: "power1.out",  y:0});
+			tl.set(['#copy', 'button', '#flipElement'], {
+				opacity: 0,
+				y: 100,
+				rotation: 0,
+			});
+			tl.to('#copy', {
+				delay: 2,
+				opacity: 1,
+				duration: 1,
+				ease: 'power1.out',
+				y: 0,
+			});
+			tl.to('button', {
+				opacity: 1,
+				duration: 1,
+				ease: 'power1.out',
+				y: 0,
+			});
+			gsap.fromTo(
+    "#flipElement",
+    {
+      opacity: 0,
+      y: "100%",
+			rotate: 0
+    },
+    {
+			delay: 4,
+      duration: 1,
+      opacity: 1,
+			rotateX: 360,
+			repeat: 1,
+      y: 0,
+      ease: "power3.inOut",
+      stagger: 0.1,
+    }
+  );
 		}
 	});
-
 </script>
 <template>
 	<section
-		class="flex flex-col h-screen justify-center items-center pr-[5vw] lg:pr-[20vw] px-4 "
+		class="flex flex-col h-screen justify-center items-center pr-[5vw] lg:pr-[20vw] px-4"
 	>
-		<div id="copy"
+		<div
+			id="copy"
 			class="flex flex-col text-stone-300 text-2xl pb-[20vh] gap-[20px] md:gap-[40px] lg:max-w-[750px] lg:mx-auto"
 		>
-			<div class="text-stone-300 text-lg">Hello 👋 my name is</div>
+			<div class="text-stone-300 text-lg">
+				Hello <span id="flipElement">👋</span> my name is
+			</div>
 			<h1 class="text-clampLarge text-highGreen">Kevin Jordan.</h1>
 
 			<div class="text-lg gradient-text">
@@ -40,4 +75,3 @@
 	<HomeAbout />
 	<!-- border border-2-highGreen  -->
 </template>
-
