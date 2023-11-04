@@ -1,16 +1,24 @@
 <script setup lang="ts">
 	import { ref } from 'vue';
 
-	const activeTab = ref(0);
-	const tabs = [
+	const activeTab = ref<number>(0);
+	const tabs: string[] = [
 		'V-Tell',
 		'NW Straps',
 		'3Charm',
 		'Rena',
-		'CatalogFinder'
+		'CatalogFinder',
 	];
 
-	function changeTab(index) {
+	const content: string[] = [
+		'V-Tell is a web application that allows users to search for and view the details of products from a variety of online stores.',
+		'NW Straps is a web application that allows users to search for and view the details of products from a variety of online stores.',
+		'3Charm is a web application that allows users to search for and view the details of products from a variety of online stores.',
+		'Rena is a web application that allows users to search for and view the details of products from a variety of online stores.',
+		'CatalogFinder is a web application that allows users to search for and view the details of products from a variety of online stores.'
+	];
+
+	function changeTab(index: number) {
 		activeTab.value = index;
 	}
 </script>
@@ -36,17 +44,12 @@
 		</div>
 		<div class="flex flex-col items-start">
 			<p
-				v-for="(tab, index) in tabs"
+				v-for="(desc, index) in content"
 				:key="index"
 				v-show="activeTab === index"
 			>
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-				Voluptatum aliquam provident magni odio alias tenetur,
-				pariatur molestiae reprehenderit eos obcaecati doloremque,
-				impedit repellendus, culpa modi quisquam exercitationem
-				incidunt iure dolore! Content for {{ tab }}
+				{{ desc }}
 			</p>
-			
 		</div>
 	</div>
 </template>
