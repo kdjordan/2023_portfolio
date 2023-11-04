@@ -1,18 +1,19 @@
 <script setup lang="ts">
 	import { gsap } from 'gsap';
+	
 	import { onMounted } from 'vue';
 
 	onMounted(() => {
-		let flag: boolean = true;
+		let flag: boolean = false;
 		if (flag) {
 			const tl = gsap.timeline();
-			tl.set(['#copy', 'button', '#flipElement'], {
+			tl.set(['#copy', 'button', '#handWave'], {
 				opacity: 0,
-				y: 100,
+				y: -100,
 				rotation: 0,
 			});
 			tl.to('#copy', {
-				delay: 2,
+				delay: 1.5,
 				opacity: 1,
 				duration: 1,
 				ease: 'power1.out',
@@ -25,14 +26,14 @@
 				y: 0,
 			});
 			gsap.fromTo(
-    "#flipElement",
+    "#handWave",
     {
       opacity: 0,
       y: "100%",
 			rotate: 0
     },
     {
-			delay: 4,
+			delay: 1.2,
       duration: 1,
       opacity: 1,
 			rotateX: 360,
@@ -46,15 +47,15 @@
 	});
 </script>
 <template>
-	<section
+	<section id="hero"
 		class="flex flex-col h-screen justify-center items-center pr-[5vw] lg:pr-[20vw] px-4"
 	>
 		<div
 			id="copy"
-			class="flex flex-col text-stone-300 text-2xl pb-[20vh] gap-[20px] md:gap-[40px] lg:max-w-[750px] lg:mx-auto"
+			class="flex flex-col  text-stone-300 text-2xl gap-[20px] md:gap-[40px] lg:max-w-[750px] lg:mx-auto"
 		>
 			<div class="text-stone-300 text-lg">
-				Hello <span id="flipElement">👋</span> my name is
+				Hello <span id="handWave">👋</span> my name is
 			</div>
 			<h1 class="text-clampLarge text-highGreen">Kevin Jordan.</h1>
 

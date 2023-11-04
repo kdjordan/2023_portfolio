@@ -46,6 +46,9 @@ export default {
 			gridTemplateColumns: {
 				skills: 'repeat(2, minmax(140px, 200px))',
 			},
+			sectionGap : {
+				paddingBottom: '20vh'
+			}
 		},
 	},
 	plugins: [],

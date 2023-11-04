@@ -11,13 +11,13 @@
 
 			// setTimeout(() => {
 			// 	document.querySelector('.home').classList.add('dots');
-			// }, 5000)
+			// }, 20)
 		}
 	});
 </script>
 
 <template>
-	<div class="home bg-sky-950">
+	<div class="home bg-sky-950 dots">
 		<TopNavigation />
 		<main class="container mx-auto">
 			<RouterView />

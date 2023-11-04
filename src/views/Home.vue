@@ -1,15 +1,15 @@
 <script setup lang="ts">
 	import { ref, onMounted } from 'vue';
 	import HomeAbout from './HomeAbout.vue';
-	import HomeHero from './HomeHero.vue';
 	import HomeExperience from './HomeExperience.vue';
+	import HomeHero from './HomeHero.vue';
 
 	const loaded = ref(false);
 
 	onMounted(() => {
 		setTimeout(() => { 
 			loaded.value = true;
-		}, 6000)
+		}, 2)
 	});
 </script>
 <template>
