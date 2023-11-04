@@ -18,7 +18,6 @@
 		<HomeAbout />
 		<HomeExperience />
 	</div>
-	<!-- border border-2-highGreen  -->
 </template>
 <style>
 	.gradient-text {
@@ -29,12 +28,4 @@
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
-	/* li::before {
-		content: "▹";
-    position: absolute;
-    left: 0px;
-    color: red;
-    font-size: 16px;
-    line-height: 12px;
-	} */
 </style>

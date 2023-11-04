@@ -35,14 +35,6 @@ export default {
 			borderCustom: {
 				guides: '1px solid #027333',
 			},
-			checkMark: {
-				content: '***',
-				position: 'absolute',
-				left: '0px',
-				color: 'red',
-				fontSize: '16px',
-				lineHeight: '12px'
-			},
 			gridTemplateColumns: {
 				skills: 'repeat(2, minmax(140px, 200px))',
 			},
