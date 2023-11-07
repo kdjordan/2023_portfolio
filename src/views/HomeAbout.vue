@@ -1,7 +1,19 @@
+<script setup lang="ts">
+import { onMounted } from 'vue';
+import { gsap } from 'gsap/gsap-core';
+
+
+onMounted(() => {
+	gsap.from('#about', { opacity:0, duration:2, ease:'power1.out', scrollTrigger: {
+		trigger: '#about',
+		start: 'top 75%'
+	}})
+})
+
+</script>
 <template>
 	<section id="about" class="flex flex-col justify-center pr-[5vw] lg:pr-[20vw] px-4 pb-[10vh]">
 		<div
-			id="copy"
 			class="flex flex-col  text-stone-300 pb-[20vh] lg:max-w-[750px] lg:mx-auto"
 		>
 		<h2 class="flex items-baseline text-2xl text-highGreen pb-[30px]">

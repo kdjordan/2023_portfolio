@@ -1,5 +1,15 @@
 <script setup lang="ts">
 import TabbedIndex from '../components/TabbedIndex.vue';
+import { onMounted } from 'vue';
+import { gsap } from 'gsap/gsap-core';
+
+
+onMounted(() => {
+	gsap.from('#experience', { opacity:0, duration:2, ease:'power1.out', scrollTrigger: {
+		trigger: '#experience',
+		start: 'top 75%'
+	}})
+})
 
 </script>
 <template>
