@@ -2,7 +2,7 @@
 	import { introAnimation } from './animations';
 	import { onMounted } from 'vue';
 	import TopNavigation from './components/TopNavigation.vue';
-	
+
 	import Footer from './components/Footer.vue';
 
 	onMounted(() => {
@@ -14,9 +14,9 @@
 </script>
 
 <template>
-	<div class="home bg-sky-950">
+	<div class="home">
 		<TopNavigation />
-		<main class="container mx-auto">
+		<main>
 			<RouterView />
 		</main>
 		<Footer />
@@ -34,5 +34,13 @@
 			linear-gradient(#082f49 calc(22px - 1px), transparent 1%) center /
 				22px 22px,
 			#9ff279;
+	}
+	.gradient-text {
+		background: linear-gradient(
+			rgb(214, 211, 209),
+			rgb(159, 242, 121)
+		);
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 </style>

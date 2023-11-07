@@ -8,7 +8,7 @@ function animateHero(): () => void {
 
 function animateBackground(): () => void  {
   return () => {
-    gsap.set('.home', {css: {className: 'dots'}, immediateRender:true})
+    gsap.set('body', {css: {className: 'dots'}, })
   }
 }
   
