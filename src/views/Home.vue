@@ -4,7 +4,9 @@
 	import HomeHero from './HomeHero.vue';
 </script>
 <template>
-	<HomeHero />
-	<HomeAbout />
-	<HomeExperience />
+	<div>
+		<HomeHero />
+		<HomeAbout />
+		<HomeExperience />
+	</div>
 </template>

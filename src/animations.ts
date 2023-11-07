@@ -8,7 +8,7 @@ function animateHero(): () => void {
 
 function animateBackground(): () => void  {
   return () => {
-    gsap.set('body', {css: {className: 'dots'}, })
+    gsap.set('body', {css: {className: 'dots'} })
   }
 }
   
@@ -17,7 +17,7 @@ export function introAnimation() {
   const tl: GSAPTimeline = gsap.timeline();
   tl.set('.top-nav',{ opacity: 0, borderBottom: 'none' })
   .to('.top-nav',{ opacity: 1, })
-  .from(['#logo', 'li'], { opacity: 0, y: -100, duration: .25, stagger: {
+  .from(['#logo', '.nav-right li'], { opacity: 0, y: -100, duration: .25, stagger: {
     amount: 1,
     from: 'start',
     ease: 'ease'

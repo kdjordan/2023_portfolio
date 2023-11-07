@@ -1,11 +1,9 @@
-
 <template>
-	<section 
-		class="flex flex-col h-screen justify-center items-center pr-[5vw] lg:pr-[20vw] px-4"
+	<section id="hero"
+		class="flex flex-col h-screen justify-center items-center"
 	>
-		<div id="hero"
-			
-			class="flex flex-col  text-stone-300 text-2xl gap-[20px] md:gap-[40px] lg:max-w-[750px] lg:mx-auto"
+		<div
+			class="flex flex-col text-stone-300 text-2xl gap-[20px] md:gap-[40px] lg:max-w-[750px] lg:mx-auto"
 		>
 			<div class="text-stone-300 text-lg">
 				Hello <span id="handWave">👋</span> my name is
@@ -15,9 +13,9 @@
 			<div class="text-lg gradient-text">
 				I am a Oregon based software engineer that loves bulding
 				digital experiences. I am currently working in the
-				telecommunications industry managing an International VOIP network
-				and a few small teams. When I'm not behind the keyboard you
-				can find me in the mountains.
+				telecommunications industry managing an International VOIP
+				network and a few small teams. When I'm not behind the
+				keyboard you can find me in the mountains.
 			</div>
 			<button
 				class="text-highGreen self-start text-base border-2 p-4 rounded-md transition duration-150 ease-out hover:ease-in hover:bg-sky-900"
@@ -26,7 +24,6 @@
 			</button>
 		</div>
 	</section>
-
 </template>
 
 <style>

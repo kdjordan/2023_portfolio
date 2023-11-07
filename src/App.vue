@@ -2,7 +2,6 @@
 	import { introAnimation } from './animations';
 	import { onMounted } from 'vue';
 	import TopNavigation from './components/TopNavigation.vue';
-
 	import Footer from './components/Footer.vue';
 
 	onMounted(() => {
@@ -14,7 +13,7 @@
 </script>
 
 <template>
-	<div class="home">
+	<div>
 		<TopNavigation />
 		<main>
 			<RouterView />
