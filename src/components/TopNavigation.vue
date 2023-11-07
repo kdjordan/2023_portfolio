@@ -14,9 +14,9 @@
 				<ul class="flex gap-4 text-highGreen text-md tracking-wider">
 					<li><router-link to="/"></router-link></li>
 					<li><a href="#about">about</a></li>
-					<li><a href="#experinece">experience</a></li>
-					<!-- <li><a href="#projects">projects</a></li>
-					<li><a href="#contact">contact</a></li> -->
+					<li><a href="#experience">experience</a></li>
+					<li><a href="#projects">projects</a></li>
+					<li><a href="#contact">contact</a></li>
 				</ul>
 			</div>
 		</nav>
