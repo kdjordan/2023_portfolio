@@ -37,7 +37,7 @@
 				</li>
 			</ul>
 		</div>
-		<div class="text-highGreen text-xl flex justify-center items-center pt-8">
+		<div class="text-highGreen  flex justify-center items-center pt-8">
 			This site was built in November 2023 by Kevin Jordan using Vue 3,
 			Tailwind, and GSAP.
 		</div>

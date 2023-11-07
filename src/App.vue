@@ -1,5 +1,5 @@
 <script setup lang="ts">
-	import { animateNav } from './animations';
+	import { introAnimation } from './animations';
 	import { onMounted } from 'vue';
 	import TopNavigation from './components/TopNavigation.vue';
 	
@@ -8,8 +8,7 @@
 	onMounted(() => {
 		let flag: boolean = true;
 		if (flag) {
-			animateNav();
-			// animateHero();
+			introAnimation();
 		}
 	});
 </script>
