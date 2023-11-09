@@ -1,10 +1,25 @@
+<script setup lang="ts">
+	// import gsap from 'gsap';
+	import { onMounted } from 'vue';
+
+	onMounted(() => {
+		// gsap.to('.top-nav', { delay: 4, y: 0, duration:.5, ease:'ease'})
+		// scrollTrigger: {
+		// 	trigger:'#hero',
+		// 	start:"100% 10%", //when top of herman passes 75% viewport height
+    //   end:"bottom 100%", //when bottom of herman passes 25% viewport height
+		// 	markers: true
+		// }})
+		// .to('.top-nav', {y: 100})
+
+	})
+</script>
 <template>
-	<section id="hero"
+	<section
+		id="hero"
 		class="flex flex-col h-screen justify-center items-center"
 	>
-		<div
-			class="flex flex-col text-stone-300 gap-[20px]"
-		>
+		<div class="flex flex-col text-stone-300 gap-[20px]">
 			<div class="text-stone-300">
 				Hello <span id="handWave">👋</span> my name is
 			</div>

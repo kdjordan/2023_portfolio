@@ -26,11 +26,16 @@ export function introAnimation() {
   .to('.top-nav', { borderBottom: '1px solid #9FF279', duration: .5, onComplete: animateHero() })
 }
 
-export function hideHeader() {
-  console.log('HIDING')
-  
+export function fadeInTextBlock(selector: string) {   
+  console.log('got selector ', selector)
+  gsap.from(selector, { opacity:0, duration:2, ease:'power1.out', scrollTrigger: {
+		trigger: selector,
+		start: '25% 75%'
+	}})
 }
+
+// export function hideHeader() {
+//   console.log('HIDING')
+  
+// }
     
-
-
-

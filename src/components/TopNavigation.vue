@@ -23,9 +23,9 @@ function toggleOpen() {
 					height="40"
 					fill="#9FF279"
 				>
-					<rect width="75" height="6" rx="8"></rect>
-					<rect y="25" width="75" height="6" rx="8"></rect>
-					<rect y="50" width="75" height="6" rx="8"></rect>
+					<rect x="15" width="75" height="6" rx="8"></rect>
+					<rect x="40" y="25" width="50" height="6" rx="8"></rect>
+					<rect x="65" y="50" width="25" height="6" rx="8"></rect>
 				</svg>
 				<!-- <ul class="flex gap-4 text-highGreen text-md tracking-wider">
 					<li><router-link to="/"></router-link></li>

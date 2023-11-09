@@ -3,17 +3,14 @@
 	import { onMounted } from 'vue';
 	import TopNavigation from './components/TopNavigation.vue';
 	import Footer from './components/Footer.vue';
+	
 
 	onMounted(() => {
 		let flag: boolean = true;
 		if (flag) {
 			introAnimation();
 		}
-		gsap.to('.top-nav', { y: -50, duration:2, ease:'power1.out', scrollTrigger: {
-		trigger: 'main',
-		markers: true,
-		start: 'top 75%'
-	}})
+		
 	});
 </script>
 

@@ -1,13 +1,11 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
-import { gsap } from 'gsap/gsap-core';
+import { fadeInTextBlock } from '../animations';
+
 
 
 onMounted(() => {
-	gsap.from('#about', { opacity:0, duration:2, ease:'power1.out', scrollTrigger: {
-		trigger: '#about',
-		start: 'top 75%'
-	}})
+	fadeInTextBlock('#about')
 })
 
 </script>
@@ -16,9 +14,9 @@ onMounted(() => {
 		<div
 			class="flex flex-col  text-stone-300 pb-[20vh] lg:max-w-[750px] lg:mx-auto"
 		>
-		<h2 class="flex items-baseline text-highGreen pb-[30px]">
+		<h2 class="flex items-center text-highGreen pb-[3rem] w-full text-xl">
 			ABOUT
-			<span class="block bg-highGreen h-[1px] w-[300px] mb-[5px] mr-[10px] opacity-40"></span>
+			<span class="block bg-highGreen h-[1px] ml-4 w-[100%] opacity-40"></span>
 		</h2>
 		<div class="gradient-text pb-4 flex flex-col gap-4">
 			<p class="mb-4">

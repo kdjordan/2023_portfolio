@@ -24,31 +24,34 @@
 </script>
 
 <template>
-	<div class="flex flex-col justfy-start gap-4">
+	<div class="flex flex-col justify-start">
 		<div
-			class="flex gap-16 overflow-x-scroll scrollbar-thin max-w-[300px]"
+			class="flex gap-4 overflow-x-scroll scrollbar-thin max-w-[440px] mx-auto text-[16px] font-oswald tracking-widest uppercase"
 		>
 			<button
 				v-for="(tab, index) in tabs"
 				:key="index"
 				@click="changeTab(index)"
 				:class="{
-					'text-highGreen': activeTab === index,
-					'pl-[4px] text-stone-300': activeTab !== index,
+					'text-highGreen active-button': activeTab === index,
+					'text-stone-300': activeTab !== index,
+					
 				}"
-				class="cursor-pointer text-content min-w-[100px] mb-4"
+				class="cursor-pointer min-w-[100px] mb-4"
 			>
 				{{ tab }}
 			</button>
 		</div>
-			<div
-				class="w-full border-highGreen border-b-[1px] w-full overflow-visible mt-[-10px]"
-			></div>
+		<!-- <div
+			class="w-full border-highGreen border-b-[1px] w-full overflow-visible mt-[-10px]"
+		></div> -->
+		<span class="block bg-highGreen h-[1px] opacity-40 overflow-visible"></span>
 		<div class="flex flex-col items-start p-4">
 			<p
 				v-for="(desc, index) in content"
 				:key="index"
 				v-show="activeTab === index"
+				class="px-4"
 			>
 				{{ desc }}
 			</p>
@@ -83,3 +86,4 @@
 		</div>
 	</div> -->
 </template>
+
