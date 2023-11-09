@@ -9,13 +9,18 @@
 		if (flag) {
 			introAnimation();
 		}
+		gsap.to('.top-nav', { y: -50, duration:2, ease:'power1.out', scrollTrigger: {
+		trigger: 'main',
+		markers: true,
+		start: 'top 75%'
+	}})
 	});
 </script>
 
 <template>
-	<div>
+	<div class="back">
 		<TopNavigation />
-		<main>
+		<main class="px-4 text-[16px]">
 			<RouterView />
 		</main>
 		<Footer />

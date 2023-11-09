@@ -15,7 +15,7 @@
 		'NW Straps is a web application that allows users to search for and view the details of products from a variety of online stores.',
 		'3Charm is a web application that allows users to search for and view the details of products from a variety of online stores.',
 		'Rena is a web application that allows users to search for and view the details of products from a variety of online stores.',
-		'CatalogFinder is a web application that allows users to search for and view the details of products from a variety of online stores.'
+		'CatalogFinder is a web application that allows users to search for and view the details of products from a variety of online stores.',
 	];
 
 	function changeTab(index: number) {
@@ -24,7 +24,37 @@
 </script>
 
 <template>
-	<div class="flex justfy-center items-top min-h-[340px] gap-16">
+	<div class="flex flex-col justfy-start gap-4">
+		<div
+			class="flex gap-16 overflow-x-scroll scrollbar-thin max-w-[300px]"
+		>
+			<button
+				v-for="(tab, index) in tabs"
+				:key="index"
+				@click="changeTab(index)"
+				:class="{
+					'text-highGreen': activeTab === index,
+					'pl-[4px] text-stone-300': activeTab !== index,
+				}"
+				class="cursor-pointer text-content min-w-[100px] mb-4"
+			>
+				{{ tab }}
+			</button>
+		</div>
+			<div
+				class="w-full border-highGreen border-b-[1px] w-full overflow-visible mt-[-10px]"
+			></div>
+		<div class="flex flex-col items-start p-4">
+			<p
+				v-for="(desc, index) in content"
+				:key="index"
+				v-show="activeTab === index"
+			>
+				{{ desc }}
+			</p>
+		</div>
+	</div>
+	<!-- <div class="flex justfy-center items-top min-h-[340px] gap-16">
 		<div
 			class="flex flex-col items-start justify-top min-w-max gap-8 pr-8"
 		>
@@ -51,5 +81,5 @@
 				{{ desc }}
 			</p>
 		</div>
-	</div>
+	</div> -->
 </template>

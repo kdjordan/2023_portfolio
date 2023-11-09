@@ -16,11 +16,11 @@ onMounted(() => {
 		<div
 			class="flex flex-col  text-stone-300 pb-[20vh] lg:max-w-[750px] lg:mx-auto"
 		>
-		<h2 class="flex items-baseline text-2xl text-highGreen pb-[30px]">
+		<h2 class="flex items-baseline text-highGreen pb-[30px]">
 			ABOUT
 			<span class="block bg-highGreen h-[1px] w-[300px] mb-[5px] mr-[10px] opacity-40"></span>
 		</h2>
-		<div class="text-lg gradient-text pb-4 flex flex-col gap-4">
+		<div class="gradient-text pb-4 flex flex-col gap-4">
 			<p class="mb-4">
 				Thanks for checking in, I'm
 				<span class="text-xl">Kevin</span>
@@ -53,11 +53,8 @@ onMounted(() => {
 				- Let's hash it out...
 				</p>
 			</p>
-			<p>Simple landing page ? Wordpress ? Funnels ? <br />
+			<p class="mb-[5vh]">Simple landing page ? Wordpress ? Funnels ? <br />
 			- Let's go...
-			</p>
-			<p class="mb-16">
-				That's me... I'm that person.
 			</p>
 		</div>
 		<div>

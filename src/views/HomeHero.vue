@@ -3,14 +3,14 @@
 		class="flex flex-col h-screen justify-center items-center"
 	>
 		<div
-			class="flex flex-col text-stone-300 text-2xl gap-[20px] md:gap-[40px] lg:max-w-[750px] lg:mx-auto"
+			class="flex flex-col text-stone-300 gap-[20px]"
 		>
-			<div class="text-stone-300 text-lg">
+			<div class="text-stone-300">
 				Hello <span id="handWave">👋</span> my name is
 			</div>
 			<h1 class="text-clampLarge text-highGreen">Kevin Jordan.</h1>
 
-			<div class="text-lg gradient-text">
+			<div class="gradient-text">
 				I am a Oregon based software engineer that loves bulding
 				digital experiences. I am currently working in the
 				telecommunications industry managing an International VOIP
