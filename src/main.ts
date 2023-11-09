@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { CSSPlugin } from 'gsap/CSSPlugin';
-import { TextPlugin, ScrollTrigger } from 'gsap/all';
+import { TextPlugin, ScrollTrigger, } from 'gsap/all';
 
 
 library.add(faGithub, faLinkedin, fas)

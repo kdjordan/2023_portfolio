@@ -27,7 +27,6 @@ export function introAnimation() {
 }
 
 export function fadeInTextBlock(selector: string) {   
-  console.log('got selector ', selector)
   gsap.from(selector, { opacity:0, duration:2, ease:'power1.out', scrollTrigger: {
 		trigger: selector,
 		start: '25% 75%'

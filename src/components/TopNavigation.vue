@@ -1,7 +1,11 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+
+const isOpen = ref(false);
 
 function toggleOpen() {
-	console.log('OPENING menu')
+	isOpen.value =!isOpen.value;
+	console.log('opening', isOpen.value)
 }
 </script>
 <template>
@@ -16,16 +20,16 @@ function toggleOpen() {
 					¯\_(ツ)_/¯
 				</h1>
 			</div>
-			<div class="nav-right">
-				<svg @click="toggleOpen"
+			<div class="nav-right" @click="toggleOpen" ref="isOpen">
+				<svg 
 					viewBox="0 0 90 70"
 					width="40"
 					height="40"
 					fill="#9FF279"
 				>
-					<rect x="15" width="75" height="6" rx="8"></rect>
-					<rect x="40" y="25" width="50" height="6" rx="8"></rect>
-					<rect x="65" y="50" width="25" height="6" rx="8"></rect>
+					<rect id="rect-top" x="15" width="75" height="6" rx="8"></rect>
+					<rect id="rect-mid" x="40" y="25" width="50" height="6" rx="8"></rect>
+					<rect id="rect-bot" x="65" y="50" width="25" height="6" rx="8"></rect>
 				</svg>
 				<!-- <ul class="flex gap-4 text-highGreen text-md tracking-wider">
 					<li><router-link to="/"></router-link></li>
@@ -39,11 +43,12 @@ function toggleOpen() {
 	</div>
 </template>
 <style scoped>
-.nav-right {
+.nav-right{
 	cursor: pointer;
 }
-.nav-right:hover rect {
-		fill: #075985;
-		transition: all 0.3s ease;
-	}
+
+.nav-right:hover rect { 
+	transition: all .4s ease;
+	fill: red;
+}
 </style>
