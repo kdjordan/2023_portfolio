@@ -16,6 +16,7 @@ export default {
 				darkBack: '#000212',
 				fontWhite: '#F2EFE9',
 				modernBlack: '#28282B',
+				canvasBlue: "#79A2F2"
 			},
 			fontFamily: {
 				oswald: ['Oswald', 'sans-serif'],
