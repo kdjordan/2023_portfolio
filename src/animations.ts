@@ -6,6 +6,24 @@ function animateHero(): () => void {
   }
 }
 
+export function toggleMobileNav() {
+  const tl: GSAPTimeline = gsap.timeline();
+
+  tl.pause()
+  
+  console.log('clicked toggle NAV', document.querySelector('#overlay'))
+
+
+
+  function runmenu(what) {
+    if (what === true) {
+      tl.play().timeScale(1);
+    } else {
+      tl.reverse().timeScale(2);
+    }
+  }
+  
+}
 
 export function introAnimation() {        
   const tl: GSAPTimeline = gsap.timeline();

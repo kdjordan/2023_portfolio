@@ -1,9 +1,11 @@
 <script setup lang="ts">
 	import { ref } from 'vue';
+	import { toggleMobileNav } from '../animations';
 
 	const isOpen = ref(true);
 
 	function toggleOpen() {
+		toggleMobileNav()
 		isOpen.value = !isOpen.value;
 	}
 </script>
@@ -13,8 +15,8 @@
 	>
 		<Transition>
 			<div
-				v-if="isOpen"
-				id="#overlay"
+				
+				id="overlay"
 				class="fixed top-0 right-0 h-screen bg-sky-500 z-20 w-full"
 			>
 				<ul
