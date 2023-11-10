@@ -3,12 +3,9 @@
 
 	const isOpen = ref(true);
 
-	// function toggleOpen() {
-	// 	isOpen.value = !isOpen.value;
-
-	// 	// gsap.fromTo('#overlay', {x:-100, opacity: 0, duration: 4}, {x:100, opacity: 1})
-	// 	console.log('opening', isOpen.value);
-	// };
+	function toggleOpen() {
+		isOpen.value = !isOpen.value;
+	}
 </script>
 <template>
 	<div
@@ -18,17 +15,27 @@
 			<div
 				v-if="isOpen"
 				id="#overlay"
-				class="fixed top-0 right-0 h-screen bg-sky-500 z-20 w-[80%]"
+				class="fixed top-0 right-0 h-screen bg-sky-500 z-20 w-full"
 			>
 				<ul
 					class="flex flex-col items-center gap-y-[20px] h-screen justify-center text-4xl text-modernBlack"
 				>
 					<li><router-link to="/"></router-link></li>
-					<li><a href="#about">about</a></li>
-					<li><a href="#experience">experience</a></li>
-					<li><a href="#projects">projects</a></li>
-					<li><a href="#contact">contact</a></li>
-					<button class="border-2 border-highGreen p-4">RESUME</button>
+					<li>
+						<a href="#about" @click="toggleOpen()">about</a>
+					</li>
+					<li>
+						<a href="#experience" @click="toggleOpen">experience</a>
+					</li>
+					<li>
+						<a href="#projects" @click="toggleOpen">projects</a>
+					</li>
+					<li>
+						<a href="#contact" @click="toggleOpen">contact</a>
+					</li>
+					<button class="border-2 border-highGreen p-4">
+						RESUME
+					</button>
 					{{
 						isOpen
 					}}
@@ -43,7 +50,7 @@
 					¯\_(ツ)_/¯
 				</h1>
 			</div>
-			<div class="nav-right z-40" @click="isOpen = !isOpen">
+			<div class="nav-right z-40" @click="toggleOpen">
 				<svg
 					viewBox="0 0 90 70"
 					width="40"
@@ -91,7 +98,7 @@
 
 	.v-enter-active,
 	.v-leave-active {
-		transition: all .7s ease;
+		transition: all 0.4s ease;
 	}
 
 	.v-enter-from,

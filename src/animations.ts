@@ -6,12 +6,6 @@ function animateHero(): () => void {
   }
 }
 
-// function animateBackground(): () => void  {
-//   return () => {
-//     gsap.set('body', {css: {className: 'dots'} })
-//   }
-// }
-  
 
 export function introAnimation() {        
   const tl: GSAPTimeline = gsap.timeline();
@@ -32,9 +26,3 @@ export function fadeInTextBlock(selector: string) {
 		start: '25% 75%'
 	}})
 }
-
-// export function hideHeader() {
-//   console.log('HIDING')
-  
-// }
-    

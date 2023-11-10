@@ -9,7 +9,7 @@
 
 </script>
 <template>
-	<section id="experience">
+	<section id="experience" style="scroll-margin-top: 100px;">
 		<div
 			class="flex flex-col items-center text-stone-300 pb-[20vh] lg:max-w-[750px] lg:mx-auto"
 		>

@@ -10,7 +10,7 @@ onMounted(() => {
 
 </script>
 <template>
-	<section id="about" class="flex flex-col justify-center pr-[5vw] lg:pr-[20vw] px-4 pb-[10vh]">
+	<section id="about" class="flex flex-col justify-center pr-[5vw] lg:pr-[20vw] px-4 pb-[10vh]" style="scroll-margin-top: 100px;">
 		<div
 			class="flex flex-col  text-stone-300 pb-[20vh] lg:max-w-[750px] lg:mx-auto"
 		>
