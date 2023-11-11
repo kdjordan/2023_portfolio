@@ -2,10 +2,10 @@
 	import { ref } from 'vue';
 	import { toggleMobileNav } from '../animations';
 
-	const isOpen = ref(true);
+	const isOpen = ref(false);
 
 	function toggleOpen() {
-		toggleMobileNav()
+		toggleMobileNav(isOpen.value);
 		isOpen.value = !isOpen.value;
 	}
 </script>
@@ -13,37 +13,28 @@
 	<div
 		class="top-nav fixed top-0 left-0 w-full h-16 font-oswald border-b border-highGreen bg-sky-950 px-[25px] z-10"
 	>
-		<Transition>
-			<div
-				
-				id="overlay"
-				class="fixed top-0 right-0 h-screen bg-sky-500 z-20 w-full"
+		<div
+			id="overlay"
+			class="fixed top-0 left-0 h-screen bg-sky-500 z-20 w-full translate-x-[-100%]"
+		>
+			<ul
+				class="flex flex-col items-center gap-y-[20px] h-screen justify-center text-4xl text-modernBlack"
 			>
-				<ul
-					class="flex flex-col items-center gap-y-[20px] h-screen justify-center text-4xl text-modernBlack"
-				>
-					<li><router-link to="/"></router-link></li>
-					<li>
-						<a href="#about" @click="toggleOpen()">about</a>
-					</li>
-					<li>
-						<a href="#experience" @click="toggleOpen">experience</a>
-					</li>
-					<li>
-						<a href="#projects" @click="toggleOpen">projects</a>
-					</li>
-					<li>
-						<a href="#contact" @click="toggleOpen">contact</a>
-					</li>
-					<button class="border-2 border-highGreen p-4">
-						RESUME
-					</button>
-					{{
-						isOpen
-					}}
-				</ul>
-			</div>
-		</Transition>
+				<li>
+					<a href="#about" @click="toggleOpen()">about</a>
+				</li>
+				<li>
+					<a href="#experience" @click="toggleOpen">experience</a>
+				</li>
+				<li>
+					<a href="#projects" @click="toggleOpen">projects</a>
+				</li>
+				<li>
+					<a href="#contact" @click="toggleOpen">contact</a>
+				</li>
+				<button class="border-2 border-highGreen p-4">RESUME</button>
+			</ul>
+		</div>
 		<nav
 			class="flex justify-between items-center h-full mx-[20px] container mx-auto"
 		>

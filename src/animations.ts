@@ -6,25 +6,19 @@ function animateHero(): () => void {
   }
 }
 
-export function toggleMobileNav() {
+export function toggleMobileNav(isOpen: boolean) {
+  console.log('isOpen', isOpen)
   const tl: GSAPTimeline = gsap.timeline();
 
-  tl.pause()
-  
-  console.log('clicked toggle NAV', document.querySelector('#overlay'))
-
-
-
-  function runmenu(what) {
-    if (what === true) {
-      tl.play().timeScale(1);
-    } else {
-      tl.reverse().timeScale(2);
-    }
+  if (isOpen === true) {
+    tl.to('#overlay', { xPercent: -100, ease: 'power1.out'})
+  } else {
+    tl.to('#overlay', { xPercent: 100, ease: 'power1.out'})
   }
-  
+
 }
 
+  
 export function introAnimation() {        
   const tl: GSAPTimeline = gsap.timeline();
   tl.set('.top-nav',{ opacity: 0, borderBottom: 'none' })
