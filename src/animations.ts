@@ -9,11 +9,15 @@ function animateHero(): () => void {
 export function toggleMobileNav(isOpen: boolean) {
   console.log('isOpen', isOpen)
   const tl: GSAPTimeline = gsap.timeline();
-
+  const links = document.querySelectorAll('#overlay > ul > li')
+  console.log(links)
   if (isOpen === true) {
-    tl.to('#overlay', { xPercent: -100, ease: 'power1.out'})
+    tl.to([links, 'button'], { x: 1000,  stagger: {amount: .25, ease: 'power1.out'}})
+    .to('#overlay', { xPercent: 100, ease: 'power1.out'})
   } else {
-    tl.to('#overlay', { xPercent: 100, ease: 'power1.out'})
+    tl.set([links, 'button'], { x: 1000 })
+    tl.to('#overlay', { xPercent: -100, ease: 'power1.out'})
+    .to([links, 'button'], { x: 0,  stagger: {amount: .25, ease: 'power1.out'}})
   }
 
 }
