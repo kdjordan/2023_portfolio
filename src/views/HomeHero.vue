@@ -1,19 +1,3 @@
-<script setup lang="ts">
-	// import gsap from 'gsap';
-	import { onMounted } from 'vue';
-
-	onMounted(() => {
-		// gsap.to('.top-nav', { delay: 4, y: 0, duration:.5, ease:'ease'})
-		// scrollTrigger: {
-		// 	trigger:'#hero',
-		// 	start:"100% 10%", //when top of herman passes 75% viewport height
-    //   end:"bottom 100%", //when bottom of herman passes 25% viewport height
-		// 	markers: true
-		// }})
-		// .to('.top-nav', {y: 100})
-
-	})
-</script>
 <template>
 	<section
 		id="hero"
@@ -40,9 +24,9 @@
 		</div>
 	</section>
 </template>
-
-<style>
-	#hero {
-		opacity: 0;
-	}
+<style scoped>
+#hero {
+	opacity: 0;
+}
 </style>
+

@@ -1,4 +1,12 @@
-const data = [
+interface Job {
+  employer: string;
+  title: string; 
+  brief: string;
+  dates: string;
+  highlights: string[];
+}
+
+const data: Job[] = [
   {
     employer: 'V-tell',
     title : 'VP Wholesale Services',
