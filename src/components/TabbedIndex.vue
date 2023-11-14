@@ -22,7 +22,7 @@
 					'text-highGreen active-button': activeTab === index,
 					'text-stone-300': activeTab !== index,
 				}"
-				class="cursor-pointer min-w-[200px] mb-4 tracking-wider uppercase"
+				class="cursor-pointer min-w-[150px] mb-4 tracking-wider uppercase"
 			>
 				{{ d.employer }}
 			</button>
@@ -40,7 +40,7 @@
 				v-show="activeTab === index"
 				class="px-4"
 			>
-				<h2 class="text-stone-300 text-xl pb-2 uppercase">
+				<h2 class="gradient-text text-xl pb-2 uppercase">
 					{{ job.title }}
 				</h2>
 				<div class="text-base pl-4 pb-4">{{ job.dates }}</div>

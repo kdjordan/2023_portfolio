@@ -16,7 +16,7 @@ export default {
 				darkBack: '#000212',
 				fontWhite: '#F2EFE9',
 				modernBlack: '#28282B',
-				canvasBlue: "#79A2F2"
+				canvasBlue: '#79A2F2',
 			},
 			fontFamily: {
 				oswald: ['Oswald', 'sans-serif'],
@@ -38,9 +38,6 @@ export default {
 			},
 			gridTemplateColumns: {
 				skills: 'repeat(2, minmax(140px, 200px))',
-			},
-			sectionGap : {
-				paddingBottom: '20vh'
 			}
 		},
 	},
