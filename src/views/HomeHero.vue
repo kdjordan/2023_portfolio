@@ -26,7 +26,7 @@
 </template>
 <style scoped>
 #hero {
-	opacity: 0;
+	opacity: 1;
 }
 </style>
 

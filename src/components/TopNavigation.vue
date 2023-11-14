@@ -5,13 +5,14 @@
 	const isOpen = ref(false);
 
 	function toggleOpen() {
+		console.log('running');
 		toggleMobileNav(isOpen.value);
 		isOpen.value = !isOpen.value;
 	}
 </script>
 <template>
 	<div
-		class="top-nav fixed top-0 left-0 w-full h-16 font-oswald border-b border-highGreen bg-sky-950 px-[25px] z-10"
+		class="top-nav fixed top-0 left-0 w-full h-16 font-oswald border-b border-highGreen bg-sky-950 z-10"
 	>
 		<div
 			id="overlay"
@@ -36,14 +37,14 @@
 			</ul>
 		</div>
 		<nav
-			class="flex justify-between items-center h-full mx-[20px] container mx-auto"
+			class="flex items-center h-full border"
 		>
 			<div class="nav-left">
 				<h1 id="logo" class="text-highGreen text-2xl font-geist">
 					¯\_(ツ)_/¯
 				</h1>
 			</div>
-			<div class="nav-right z-40" @click="toggleOpen">
+			<div class="nav-right z-40 border" @click="toggleOpen">
 				<svg
 					viewBox="0 0 90 70"
 					width="40"
@@ -87,16 +88,5 @@
 	.nav-right:hover rect {
 		transition: all 0.4s ease;
 		fill: #234a69;
-	}
-
-	.v-enter-active,
-	.v-leave-active {
-		transition: all 0.4s ease;
-	}
-
-	.v-enter-from,
-	.v-leave-to {
-		transform: translateX(100%);
-		opacity: 0;
 	}
 </style>

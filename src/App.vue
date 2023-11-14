@@ -6,7 +6,7 @@
 	
 
 	onMounted(() => {
-		let flag: boolean = true;
+		let flag: boolean = false;
 		if (flag) {
 			introAnimation();
 		}
@@ -15,7 +15,7 @@
 </script>
 
 <template>
-	<div class="back">
+	<div>
 		<TopNavigation />
 		<main class="px-4 text-[16px]">
 			<RouterView />

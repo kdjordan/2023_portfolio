@@ -21,13 +21,14 @@ export function toggleMobileNav(isOpen: boolean) {
 
 export function introAnimation() {          
   const tl: GSAPTimeline = gsap.timeline();
+  console.log('running')
   tl.set('.top-nav',{ opacity: 0, borderBottom: 'none' })
   .to('.top-nav',{ opacity: 1 })
   .from(['#logo', '.nav-right rect'], { opacity: 0, y: -100, duration: .1, stagger: {
     amount: .5,
     from: 'start',
     ease: 'ease'
-    }
+    },  onComplete: () => console.log('here')
   })
   .to('.top-nav', { borderBottom: '1px solid #9FF279', duration: .5, onComplete: fadeInHero()})
 }
