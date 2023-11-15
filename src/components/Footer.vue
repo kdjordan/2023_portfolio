@@ -1,7 +1,7 @@
 <template>
 	<div
 		id="footer"
-		class="footerfont-geist border-t border-highGreen bg-sky-950 px-[10px]  py-8"
+		class="footerfont-geist border-t border-highGreen bg-sky-950 py-8"
 	>
 		<div>
 			<ul

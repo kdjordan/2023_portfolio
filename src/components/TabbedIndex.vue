@@ -12,7 +12,7 @@
 <template>
 	<div class="flex flex-col justify-start">
 		<div
-			class="flex gap-4 overflow-x-scroll scrollbar-thin w-full mx-auto text-[16px] font-oswald tracking-widest uppercase"
+			class="flex gap-4 overflow-x-auto scrollbar-thin w-full mx-auto text-[16px] font-oswald tracking-widest uppercase"
 		>
 			<button
 				v-for="(d, index) in data"

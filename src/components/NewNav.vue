@@ -1,5 +1,5 @@
 <script setup lang="ts">
-	import { ref } from 'vue';
+import { ref } from 'vue';
 	import { toggleMobileNav } from '../animations';
 
 	const isOpen = ref(false);
@@ -11,32 +11,7 @@
 	}
 </script>
 <template>
-	<div
-		class="top-nav fixed top-0 left-0 w-full h-16 font-oswald border-b border-highGreen bg-sky-950 z-10"
-	>
-		<!-- <div
-			id="overlay"
-			class="fixed top-0 left-0 h-screen bg-sky-500 z-20 w-full"
-		>
-			<ul
-				class="flex flex-col items-center gap-y-[20px] h-screen justify-center text-4xl text-modernBlack"
-			>
-				<li>
-					<a href="#about" @click="toggleOpen()">about</a>
-				</li>
-				<li>
-					<a href="#experience" @click="toggleOpen">experience</a>
-				</li>
-				<li>
-					<a href="#projects" @click="toggleOpen">projects</a>
-				</li>
-				<li>
-					<a href="#contact" @click="toggleOpen">contact</a>
-				</li>
-				<button class="border-2 border-highGreen p-4">RESUME</button>
-			</ul>
-		</div> -->
-		<nav
+<nav
 			class="flex justify-between px-4 items-center h-full"
 		>
 			<div class="nav-left">
@@ -78,15 +53,6 @@
 				</ul> -->
 			</div>
 		</nav>
-	</div>
-</template>
-<style scoped>
-	.nav-right {
-		cursor: pointer;
-	}
 
-	.nav-right:hover rect {
-		transition: all 0.4s ease;
-		fill: #234a69;
-	}
-</style>
+
+</template>

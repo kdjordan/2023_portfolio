@@ -11,7 +11,8 @@ onMounted(() => {
 	<section 
 		id="about" 
 		class="flex flex-col justify-center pb-[10vh]" 
-		style="scroll-margin-top: 100px;">
+		style="scroll-margin-top: 100px;"
+		>
 		<div
 			class="flex flex-col text-stone-300 pb-[20vh] lg:max-w-[750px] lg:mx-auto"
 		>
@@ -27,7 +28,7 @@ onMounted(() => {
 				I've been bulding things in various industries for a while
 				now, and I'm always up for a challenge. Because of that, I've
 				had get good at things like : coding, branding, design,
-				personel management, techanical infrastructure design,
+				personnel management, technical infrastructure design,
 				accounting, commercial sales, system design, and whatever else
 				was needed to make things work.
 			</p>
@@ -71,6 +72,8 @@ onMounted(() => {
 						<li><span>🤟 </span>Node/Express</li>
 						<li><span>🤟 </span>React</li>
 						<li><span>🤟 </span>Tailwind</li>
+						<li><span>🤟 </span>Typescript</li>
+						<li><span>🤟 </span>GSAP</li>
 						<li><span>🤟 </span>Amplify</li>
 						<li><span>🤟 </span>Postgres</li>
 						<li><span>🤟 </span>Wordpress</li>
