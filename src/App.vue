@@ -1,7 +1,7 @@
 <script setup lang="ts">
 	import { introAnimation } from './animations';
 	import { onMounted } from 'vue';
-	import NewNav from './components/TopNavigation.vue';
+	import NewNav from './components/NewNav.vue';
 	import Footer from './components/Footer.vue';
 
 	onMounted(() => {

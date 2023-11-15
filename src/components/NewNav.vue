@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+	import { ref } from 'vue';
 	import { toggleMobileNav } from '../animations';
 
 	const isOpen = ref(false);
@@ -11,15 +11,18 @@ import { ref } from 'vue';
 	}
 </script>
 <template>
-<nav
-			class="flex justify-between px-4 items-center h-full"
-		>
+	<div
+		class="top-nav fixed top-0 left-0 w-full h-16 font-oswald border-b border-highGreen bg-sky-950 z-10"
+	>
+		<nav class="flex justify-between px-4 items-center h-full">
 			<div class="nav-left">
 				<h1 id="logo" class="text-highGreen text-2xl font-geist">
 					¯\_(ツ)_/¯
 				</h1>
 			</div>
-			<div class="nav-right z-40" @click="toggleOpen">
+			<div class="nav-right z-30" 
+			:class="{ 'z-99': isOpen }"
+			@click="toggleOpen">
 				<svg
 					viewBox="0 0 90 70"
 					width="40"
@@ -44,15 +47,32 @@ import { ref } from 'vue';
 						rx="8"
 					></rect>
 				</svg>
-				<!-- <ul class="flex gap-4 text-highGreen text-md tracking-wider">
-					<li><router-link to="/"></router-link></li>
-					<li><a href="#about">about</a></li>
-					<li><a href="#experience">experience</a></li>
-					<li><a href="#projects">projects</a></li>
-					<li><a href="#contact">contact</a></li>
-				</ul> -->
 			</div>
 		</nav>
-
-
+		{{ `**- ${isOpen}`  }}
+	</div>
+	<div
+		id="overlay"
+		class="fixed top-0 left-0 bg-sky-500 z-20 w-full h-screen translate-x-[100%]"
+	>
+		<ul
+			class=" border flex flex-col justify-center items-center gap-y-[20px] fixed top-0 left-0 text-4xl text-modernBlack h-screen w-full"
+		>
+			<li>
+				<a href="#about" @click="toggleOpen()">about</a>
+			</li>
+			<li>
+				<a href="#experience" @click="toggleOpen">experience</a>
+			</li>
+			<li>
+				<a href="#projects" @click="toggleOpen">projects</a>
+			</li>
+			<li>
+				<a href="#contact" @click="toggleOpen">contact</a>
+			</li>
+			<button class="border-2 border-highGreen p-4">RESUME</button>
+		</ul>
+	</div>
 </template>
+
+

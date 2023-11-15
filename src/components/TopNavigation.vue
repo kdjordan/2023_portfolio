@@ -14,7 +14,7 @@
 	<div
 		class="top-nav fixed top-0 left-0 w-full h-16 font-oswald border-b border-highGreen bg-sky-950 z-10"
 	>
-		<!-- <div
+		<div
 			id="overlay"
 			class="fixed top-0 left-0 h-screen bg-sky-500 z-20 w-full"
 		>
@@ -35,7 +35,7 @@
 				</li>
 				<button class="border-2 border-highGreen p-4">RESUME</button>
 			</ul>
-		</div> -->
+		</div>
 		<nav
 			class="flex justify-between px-4 items-center h-full"
 		>
