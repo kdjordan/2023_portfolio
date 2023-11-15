@@ -2,21 +2,22 @@
 import { onMounted } from 'vue';
 import { fadeInTextBlock } from '../animations';
 
-
-
 onMounted(() => {
 	fadeInTextBlock('#about')
 })
 
 </script>
 <template>
-	<section id="about" class="flex flex-col justify-center pr-[5vw] lg:pr-[20vw] px-4 pb-[10vh]" style="scroll-margin-top: 100px;">
+	<section 
+		id="about" 
+		class="flex flex-col justify-center pb-[10vh]" 
+		style="scroll-margin-top: 100px;">
 		<div
-			class="flex flex-col  text-stone-300 pb-[20vh] lg:max-w-[750px] lg:mx-auto"
+			class="flex flex-col text-stone-300 pb-[20vh] lg:max-w-[750px] lg:mx-auto"
 		>
 		<h2 class="flex items-center text-highGreen pb-[3rem] w-full text-xl">
 			ABOUT
-			<span class="block bg-highGreen h-[1px] ml-4 w-[100%] opacity-40"></span>
+			<span class="block bg-highGreen h-[1px] ml-4 w-full opacity-40"></span>
 		</h2>
 		<div class="gradient-text pb-4 flex flex-col gap-4">
 			<p class="mb-4">

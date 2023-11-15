@@ -37,7 +37,7 @@
 			</ul>
 		</div>
 		<nav
-			class="flex items-center h-full border"
+			class="flex justify-between px-4 items-center h-full border"
 		>
 			<div class="nav-left">
 				<h1 id="logo" class="text-highGreen text-2xl font-geist">

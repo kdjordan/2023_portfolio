@@ -17,7 +17,7 @@
 <template>
 	<div>
 		<TopNavigation />
-		<main class="px-4 text-[16px]">
+		<main class="mx-4 text-[16px]">
 			<RouterView />
 		</main>
 		<Footer />

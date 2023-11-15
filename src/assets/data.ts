@@ -30,7 +30,7 @@ const data: Job[] = [
   },
   {
     employer: 'Tabata Project',
-    title : 'Brand Strategist / Coach',
+    title : 'Tech Lead / Coach',
     brief : 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
     dates : '2010-2012',
     highlights: ['Desinged and impemented original web presence.', 'Built, recorded, and maintained a catalog of mp3 workouts', 'Coached clients in the physical gym space.', 'Revenue increased by 300% during my tenure.']
