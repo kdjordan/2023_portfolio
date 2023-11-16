@@ -2,9 +2,16 @@ import { gsap } from 'gsap';
 
 function fadeInHero() {
   return () => {
+    console.log('fading hero')
     gsap.fromTo('#hero', { y: -100 }, { y: 0, opacity: 1, duration:.5, ease: 'power1.out'})
   }
 }
+
+export function animateJobChange() {
+  gsap.from('#job', { duration: 1.5, opacity: 0, x: 10, ease: 'power1.out'})
+}
+
+
 export function toggleMobileNav(isOpen: boolean) {
   console.log('isOpen', isOpen)
   const tl: GSAPTimeline = gsap.timeline();

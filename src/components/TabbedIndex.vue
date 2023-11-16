@@ -1,18 +1,19 @@
 <script setup lang="ts">
 	import { ref } from 'vue';
 	import data from '../assets/data.ts';
-
+	import { animateJobChange } from '../animations.ts';
 	const activeTab = ref<number>(0);
 
 	function changeTab(index: number) {
 		activeTab.value = index;
+		animateJobChange()
 	}
 </script>
 
 <template>
 	<div class="flex flex-col justify-start">
 		<div
-			class="flex gap-4 overflow-x-auto scrollbar-thin w-full mx-auto text-[16px] font-oswald tracking-widest uppercase"
+			class="flex gap-4 overflow-x-auto scrollbar-thin w-full text-[16px] font-oswald tracking-widest uppercase"
 		>
 			<button
 				v-for="(d, index) in data"
@@ -37,6 +38,7 @@
 			<div
 				v-for="(job, index) in data"
 				:key="index"
+				id="job"
 				v-show="activeTab === index"
 				class="px-4"
 			>
@@ -49,7 +51,14 @@
 					:key="highlight"
 					class="text-stone-400 pb-4 pl-4"
 				>
-					<span class="text-highGreen">▹</span> {{ highlight }}
+					<div class="flex items-top">
+						<div class="pr-2">
+							<span class="text-highGreen">▹</span>
+						</div>
+						<div>
+							{{ highlight }}
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -70,7 +70,6 @@
 				</svg>
 			</div>
 		</nav>
-		{{ `**- ${isOpen}`  }}
 	</div>
 	
 </template>
