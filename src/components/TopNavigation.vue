@@ -5,9 +5,8 @@
 	const isOpen = ref(false);
 
 	function toggleOpen() {
-		console.log('running');
-		toggleMobileNav(isOpen.value);
 		isOpen.value = !isOpen.value;
+		toggleMobileNav(isOpen.value);
 	}
 </script>
 <template>
@@ -22,7 +21,7 @@
 			class=" border flex flex-col justify-center items-center gap-y-[20px] fixed top-0 left-0 text-4xl text-modernBlack h-screen w-full"
 		>
 			<li>
-				<a href="#about" @click="toggleOpen()">about</a>
+				<a href="#about" @click="toggleOpen">about</a>
 			</li>
 			<li>
 				<a href="#experience" @click="toggleOpen">experience</a>

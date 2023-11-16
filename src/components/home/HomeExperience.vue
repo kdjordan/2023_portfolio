@@ -1,7 +1,7 @@
 <script setup lang="ts">
-	import TabbedIndex from '../components/TabbedIndex.vue';
+	import TabbedIndex from '../TabbedIndex.vue';
 	import { onMounted } from 'vue';
-	import { fadeInTextBlock } from '../animations';
+	import { fadeInTextBlock } from '../../animations';
 
 	onMounted(() => {
 		fadeInTextBlock('#experience');

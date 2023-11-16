@@ -1,6 +1,6 @@
 <script setup lang="ts">
 	import { onMounted } from 'vue';
-	import { fadeInTextBlock } from '../animations';
+	import { fadeInTextBlock } from '../../animations';
 
 	onMounted(() => {
 		fadeInTextBlock('#projects');
@@ -28,7 +28,7 @@
 			</div>
 			<div>
 				<div class="flex flex-col text-stone-300">
-					<div class="mb-8">
+					<div class="mb-8 gradient-text">
 						I am currently migrating all of my old projects to a new
 						unified AWS infrastructure. Check back soon !
 					</div>

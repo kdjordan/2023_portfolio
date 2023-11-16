@@ -19,7 +19,7 @@
 			<button
 				class="text-highGreen self-start text-base border-2 p-4 rounded-md transition duration-150 ease-out hover:ease-in hover:bg-sky-900"
 			>
-				Reach Out
+				SAY HI !
 			</button>
 		</div>
 	</section>

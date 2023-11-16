@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
-import { fadeInTextBlock } from '../animations';
+import { fadeInTextBlock } from '../../animations';
 
 onMounted(() => {
 	fadeInTextBlock('#about')
