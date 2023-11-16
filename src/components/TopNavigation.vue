@@ -15,7 +15,7 @@
 	>
 		<div
 			id="overlay"
-			class="fixed top-0 left-0 bg-sky-500 z-20 w-full h-screen translate-x-[100%]"
+			class="fixed top-0 right-0 bg-sky-500 z-20 w-full h-screen translate-x-[100%]"
 		>
 			<ul
 				class="border flex flex-col justify-center items-center gap-y-[20px] fixed top-0 left-0 text-4xl text-modernBlack h-screen w-full"
