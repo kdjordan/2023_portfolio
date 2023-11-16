@@ -14,10 +14,21 @@ export function animateJobChange() {
 export function toggleMobileNav(isOpen: boolean) {
   const tl: GSAPTimeline = gsap.timeline();
   const links = document.querySelectorAll('#overlay > ul > li')
-  if (isOpen === true) {
+  const upper = document.querySelectorAll('#upper')
+  const middle = document.querySelectorAll('#middle')
+  const lower = document.querySelectorAll('#lower')
+  // console.log('upper ', upper)
+  if (isOpen !== true) {
+    tl.to(middle, {rotation: -360,
+      transformOrigin:"50% 50%"})
+      tl.to([upper, lower], {x: 0, opacity: 1, delay: 1})
     tl.to([links, '#overlay > ul > button'], { x: 1000,  stagger: {amount: .10, ease: 'power1.out'}})
     .to('#overlay', { duration: .2, xPercent: 100, ease: 'power1.out'})
   } else {
+    // tl.to([upper,middle, lower], { x: 50})
+    tl.to(middle, {rotation: 360,
+      transformOrigin:"50% 50%"})
+      tl.to([upper, lower], { x: 100, opacity: 0 })
     tl.set([links, '#overlay > ul > button'], { x: 1000 })
     tl.to('#overlay', { duration: .2, xPercent: -100, ease: 'power1.out'})
     .to([links, 'button'], { x: 0,  stagger: {amount: .10, ease: 'power1.out'}})
