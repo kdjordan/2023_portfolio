@@ -1,7 +1,7 @@
 <script setup lang="ts">
 	import { introAnimation } from './animations';
 	import { onMounted } from 'vue';
-	import NewNav from './components/NewNav.vue';
+	import TopNavigation from './components/TopNavigation.vue';
 	import Footer from './components/Footer.vue';
 
 	onMounted(() => {
@@ -13,7 +13,7 @@
 </script>
 
 <template>
-	<NewNav />
+	<TopNavigation />
 	<main class="mx-4 text-[16px]">
 		<RouterView />
 	</main>
