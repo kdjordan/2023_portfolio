@@ -15,9 +15,9 @@
 	<div
 		class="top-nav fixed top-0 left-0 w-full h-16 font-oswald border-b border-highGreen bg-sky-950 z-10"
 	>
-		<div
+	<div
 			id="overlay"
-			class="absolute top-0 left-0 bg-sky-500 z-20 w-full h-screen translate-x-[100%]"
+			class="fixed top-0 left-0 bg-sky-500 z-20 w-full h-screen translate-x-[100%]"
 		>
 			<ul
 				class="border flex flex-col justify-center items-center gap-y-[20px] fixed top-0 left-0 text-4xl text-modernBlack h-screen w-full"

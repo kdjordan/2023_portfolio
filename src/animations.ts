@@ -2,7 +2,6 @@ import { gsap } from 'gsap';
 
 function fadeInHero() {
   return () => {
-    console.log('running')
     gsap.fromTo('#hero', { y: -100 }, { y: 0, opacity: 1, duration:.5, ease: 'power1.out'})
   }
 }
