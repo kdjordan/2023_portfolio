@@ -10,7 +10,7 @@
 			<h1 class="text-clampLarge text-highGreen">Kevin Jordan.</h1>
 
 			<div class="gradient-text">
-				I am a Oregon based software engineer that loves bulding
+				I am an Oregon based software engineer that loves building
 				digital experiences. I am currently working in the
 				telecommunications industry managing an International VOIP
 				network and a few small teams. When I'm not behind the

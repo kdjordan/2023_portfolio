@@ -25,9 +25,9 @@ onMounted(() => {
 				Thanks for checking in, I'm
 				<span class="text-xl">Kevin</span>
 				.<br /> 
-				I've been bulding things in various industries for a while
+				I've been building things in various industries for a while
 				now, and I'm always up for a challenge. Because of that, I've
-				had get good at things like : coding, branding, design,
+				had to get good at things like : coding, branding, design,
 				personnel management, technical infrastructure design,
 				accounting, commercial sales, system design, and whatever else
 				was needed to make things work.
