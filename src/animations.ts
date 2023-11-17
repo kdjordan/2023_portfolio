@@ -22,7 +22,7 @@ export function toggleMobileNav(isOpen: boolean) {
       transformOrigin:"50% 50%"})
       tl.to([upper, lower], {x: 0, opacity: 1})
     tl.to([links, '#overlay > ul > button'], { x: 1000,  stagger: {amount: .10, ease: 'power1.out'}}, "-=.5")
-    .to('#overlay', { duration: .2, x: '100%', ease: 'power1.out'}, '-=.7')
+    .to('#overlay', { duration: .2, xPercent: 100, ease: 'power1.out'}, '-=.7')
   } else {
     // tl.to([upper,middle, lower], { x: 50})
     tl.to(middle, {rotation: 360,
