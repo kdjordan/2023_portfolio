@@ -1,4 +1,6 @@
 <script setup lang="ts">
+	import Logo from './Logo.vue';
+
 	import { ref } from 'vue';
 	import { toggleMobileNav } from '../animations';
 
@@ -15,7 +17,7 @@
 	>
 		<div
 			id="overlay"
-			class="fixed top-0 right-0 bg-sky-500 z-20 w-full h-screen translate-x-[100%]"
+			class="absolute top-0 left-0 bg-sky-500 z-20 w-full h-screen translate-x-[100%]"
 		>
 			<ul
 				class="border flex flex-col justify-center items-center gap-y-[20px] fixed top-0 left-0 text-4xl text-modernBlack h-screen w-full"
@@ -33,16 +35,23 @@
 					<a href="#contact">contact</a>
 				</li>
 				<li @click="toggleOpen">
-					<a href="./kevin_jordan.pdf" target="_blank"
-						rel="noopener noreferrer"><button class="border-2 border-highGreen p-4">RESUME</button></a>
+					<a
+						href="./kevin_jordan.pdf"
+						target="_blank"
+						rel="noopener noreferrer"
+						><button class="border-2 border-highGreen p-4">
+							RESUME
+						</button></a
+					>
 				</li>
-				
 			</ul>
 		</div>
-		<nav class="flex justify-between px-4 items-center h-full container mx-auto">
+		<nav
+			class="flex justify-between px-4 items-center h-full container mx-auto"
+		>
 			<div class="nav-left">
 				<h1 id="logo" class="text-highGreen text-2xl font-geist">
-					¯\_(ツ)_/¯
+					<Logo />
 				</h1>
 			</div>
 			<div class="nav-right z-30 cursor-pointer" @click="toggleOpen">

@@ -47,7 +47,7 @@ const data: Job[] = [
     title : 'Lead Developer',
     brief : 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
     dates : '1998-2000',
-    highlights: ['Responsible for hiring and managing a small enginering team.', 'Conceived, written, orchestrated, and guided a contracrts which resulted in 500k investment in the company.']
+    highlights: ['Responsible for hiring and managing a small enginering team.', 'Conceived, wrote, orchestrated, and managed software projects that funded the company.']
   },
   
   

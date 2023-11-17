@@ -12,7 +12,7 @@
 
 <template>
 	<div class="flex flex-col justify-start">
-		<div
+		<div id="scroller"
 			class="flex gap-4 overflow-x-auto scrollbar-thin w-full text-[16px] font-oswald tracking-widest uppercase"
 		>
 			<button
@@ -28,9 +28,6 @@
 				{{ d.employer }}
 			</button>
 		</div>
-		<!-- <div
-			class="w-full border-highGreen border-b-[1px] w-full overflow-visible mt-[-10px]"
-		></div> -->
 		<span
 			class="block bg-highGreen h-[1px] opacity-40 overflow-visible"
 		></span>
@@ -64,3 +61,8 @@
 		</div>
 	</div>
 </template>
+<style scoped>
+#scroller {
+	scrollbar-color: red important;
+}
+</style>

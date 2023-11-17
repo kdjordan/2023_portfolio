@@ -18,13 +18,12 @@ export function toggleMobileNav(isOpen: boolean) {
   const upper = document.querySelectorAll('#upper')
   const middle = document.querySelectorAll('#middle')
   const lower = document.querySelectorAll('#lower')
-  // console.log('upper ', upper)
   if (isOpen !== true) {
     tl.to(middle, {rotation: -360,
       transformOrigin:"50% 50%"})
       tl.to([upper, lower], {x: 0, opacity: 1})
     tl.to([links, '#overlay > ul > button'], { x: 1000,  stagger: {amount: .10, ease: 'power1.out'}}, "-=.5")
-    .to('#overlay', { duration: .2, xPercent: 100, ease: 'power1.out'}, '-=.7')
+    .to('#overlay', { duration: .2, x: '100%', ease: 'power1.out'}, '-=.7')
   } else {
     // tl.to([upper,middle, lower], { x: 50})
     tl.to(middle, {rotation: 360,
