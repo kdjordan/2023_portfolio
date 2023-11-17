@@ -20,28 +20,32 @@
 			<ul
 				class="border flex flex-col justify-center items-center gap-y-[20px] fixed top-0 left-0 text-4xl text-modernBlack h-screen w-full"
 			>
-				<li>
-					<a href="#about" @click="toggleOpen">about</a>
+				<li @click="toggleOpen">
+					<a href="#about">about</a>
 				</li>
-				<li>
-					<a href="#experience" @click="toggleOpen">experience</a>
+				<li @click="toggleOpen">
+					<a href="#experience">experience</a>
 				</li>
-				<li>
-					<a href="#projects" @click="toggleOpen">projects</a>
+				<li @click="toggleOpen">
+					<a href="#projects">projects</a>
 				</li>
-				<li>
-					<a href="#contact" @click="toggleOpen">contact</a>
+				<li @click="toggleOpen">
+					<a href="#contact">contact</a>
 				</li>
-				<button class="border-2 border-highGreen p-4">RESUME</button>
+				<li @click="toggleOpen">
+					<a href="./kevin_jordan.pdf" target="_blank"
+						rel="noopener noreferrer"><button class="border-2 border-highGreen p-4">RESUME</button></a>
+				</li>
+				
 			</ul>
 		</div>
-		<nav class="flex justify-between px-4 items-center h-full">
+		<nav class="flex justify-between px-4 items-center h-full container mx-auto">
 			<div class="nav-left">
 				<h1 id="logo" class="text-highGreen text-2xl font-geist">
 					¯\_(ツ)_/¯
 				</h1>
 			</div>
-			<div class="nav-right z-30" @click="toggleOpen">
+			<div class="nav-right z-30 cursor-pointer" @click="toggleOpen">
 				<svg
 					viewBox="0 0 90 70"
 					width="40"

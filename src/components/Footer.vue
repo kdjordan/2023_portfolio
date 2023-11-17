@@ -27,7 +27,7 @@
 				</li>
 				<li>
 					<a
-						href="https://www.linkedin.com/in/kevin-dean-jordan/"
+						href="mailto:k.dean.jordan@gmail.com"
 						target="_blank"
 						rel="noopener noreferrer"
 						><font-awesome-icon
@@ -37,9 +37,11 @@
 				</li>
 			</ul>
 		</div>
-		<div class="text-highGreen flex justify-center items-center pt-8 text-center">
-			This site was built in November 2023 by Kevin Jordan using Vue 3,
-			Tailwind, and GSAP.
+		<div
+			class="text-highGreen flex justify-center items-center pt-8 text-center"
+		>
+			This site was built in November 2023 by Kevin Jordan using Vue
+			3, Tailwind, and GSAP.
 		</div>
 	</div>
 </template>

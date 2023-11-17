@@ -1,9 +1,9 @@
 <template>
 	<section
 		id="hero"
-		class="flex flex-col h-screen justify-center items-center"
+		class="flex flex-col h-screen justify-center items-center "
 	>
-		<div class="flex flex-col text-stone-300 gap-[20px]">
+		<div class="flex flex-col text-stone-300 gap-[20px] lg:max-w-[750px] lg:mx-auto">
 			<div class="text-stone-300">
 				Hello <span id="handWave">👋</span> my name is
 			</div>
@@ -19,7 +19,7 @@
 			<button
 				class="text-highGreen self-start text-base border-2 p-4 rounded-md transition duration-150 ease-out hover:ease-in hover:bg-sky-900"
 			>
-				SAY HI !
+				<a  target=”_blank” rel="noopener noreferrer" href="mailto:k.dean.jordan@gmail.com">SAY HI !</a>
 			</button>
 		</div>
 	</section>

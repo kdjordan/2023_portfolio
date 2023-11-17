@@ -5,7 +5,7 @@
 	import Footer from './components/Footer.vue';
 
 	onMounted(() => {
-		let flag: boolean = false;
+		let flag: boolean = true;
 		if (flag) {
 			introAnimation();
 		}

@@ -28,10 +28,16 @@
 			</div>
 			<div>
 				<div class="flex flex-col text-stone-300 justify-center items-center">
-					<div class="mb-8 text-center gradient-text">
+					<div class="mb-8 text-center gradient-text mb-16">
 						If you are working on something interesting, I'd like to hear about it.
 					</div>
-					<button class="border-2 border-highGreen p-4 w-1/2">DROP IN</button>
+					
+					<a href="mailto:k.dean.jordan@gmail.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						>
+						<button class="border-2 border-highGreen p-4">DROP IN</button>
+						</a>
 				</div>
 			</div>
 		</div>
