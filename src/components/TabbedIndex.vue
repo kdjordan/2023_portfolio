@@ -6,13 +6,14 @@
 
 	function changeTab(index: number) {
 		activeTab.value = index;
-		animateJobChange()
+		animateJobChange();
 	}
 </script>
 
 <template>
 	<div class="flex flex-col justify-start">
-		<div id="scroller"
+		<div
+			id="scroller"
 			class="flex gap-4 overflow-x-auto scrollbar-thin w-full text-[16px] font-oswald tracking-widest uppercase"
 		>
 			<button
@@ -62,7 +63,7 @@
 	</div>
 </template>
 <style scoped>
-#scroller {
-	scrollbar-color: red important;
-}
+	#scroller {
+		scrollbar-color: red important;
+	}
 </style>

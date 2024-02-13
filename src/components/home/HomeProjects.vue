@@ -1,6 +1,7 @@
 <script setup lang="ts">
 	import { onMounted } from 'vue';
 	import { fadeInTextBlock } from '../../animations';
+	import projects from '../../assets/projects.ts';
 
 	onMounted(() => {
 		fadeInTextBlock('#projects');
@@ -26,14 +27,26 @@
 			<div class="gradient-text pb-4 flex flex-col gap-4">
 				<p class="mb-4"></p>
 			</div>
-			<div>
-				<div class="flex flex-col text-stone-300">
-					<div class="mb-8 gradient-text">
-						I am currently migrating all of my old projects to a new
-						unified AWS infrastructure. Check back soon !
-					</div>
-				</div>
+			<div></div>
+		</div>
+		<div
+			class="flex justify-around items-center text-stone-300 w-full"
+		>
+			<div
+				v-for="(p, index) in projects"
+				:key="index"
+				class="card cursor-pointer min-w-[150px] mb-4 tracking-wider uppercase"
+			>
+				<img :src="`./image/${p.link}`" alt="project image" />
+				{{ p.name }}
 			</div>
 		</div>
 	</section>
 </template>
+
+<style scoped>
+	.card {
+		max-width: 500px;
+		border: 1px solid green;
+	}
+</style>
