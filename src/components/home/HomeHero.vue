@@ -1,19 +1,21 @@
 <template>
 	<section
 		id="hero"
-		class="flex flex-col h-screen justify-center items-center "
+		class="flex flex-col h-screen justify-center items-center"
 	>
-		<div class="flex flex-col text-stone-300 gap-[20px] lg:max-w-[750px] lg:mx-auto">
+		<div class="flex flex-col text-stone-300 gap-[20px] lg:max-w-[1100px] lg:mx-auto">
 			<div class="text-stone-300">
 				Hello <span id="handWave">👋</span> my name is
 			</div>
 			<h1 class="text-clampLarge text-highGreen">Kevin Jordan.</h1>
 
-			<div class="gradient-text">
+			<div class="gradient-text leading-loose">
 				I am an Oregon based software engineer that loves building
-				digital experiences. I am currently working in the
+				digital experiences.<br /> 
+				I currently work in the
 				telecommunications industry managing an International VOIP
-				network and a few small teams. When I'm not behind the
+				network and a few small teams.<br /> 
+				When I'm not behind the
 				keyboard you can find me in the mountains.
 			</div>
 			<button

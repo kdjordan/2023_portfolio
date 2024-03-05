@@ -14,7 +14,7 @@
 	<div class="flex flex-col justify-start">
 		<div
 			id="scroller"
-			class="flex gap-4 overflow-x-auto scrollbar-thin w-full text-[16px] font-oswald tracking-widest uppercase"
+			class="flex gap-4 overflow-x-auto scrollbar w-full text-[16px] font-oswald tracking-widest uppercase"
 		>
 			<button
 				v-for="(d, index) in data"
@@ -24,7 +24,7 @@
 					'text-highGreen active-button': activeTab === index,
 					'text-stone-300': activeTab !== index,
 				}"
-				class="cursor-pointer min-w-[150px] mb-4 tracking-wider uppercase"
+				class="cursor-pointer min-w-[150px] mb-4 tracking-wider uppercase truncate"
 			>
 				{{ d.employer }}
 			</button>

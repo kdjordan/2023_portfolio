@@ -14,13 +14,13 @@ onMounted(() => {
 		style="scroll-margin-top: 100px;"
 		>
 		<div
-			class="flex flex-col text-stone-300 pb-[20vh] lg:max-w-[750px] lg:mx-auto"
+			class="flex flex-col text-stone-300 pb-[20vh] lg:max-w-[1100px] lg:mx-auto"
 		>
 		<h2 class="flex items-center text-highGreen pb-[3rem] w-full text-xl">
 			ABOUT
 			<span class="block bg-highGreen h-[1px] ml-4 w-full opacity-40"></span>
 		</h2>
-		<div class="gradient-text pb-4 flex flex-col gap-4">
+		<div class="gradient-text pb-4 flex flex-col gap-4 leading-loose">
 			<p class="mb-4">
 				Thanks for checking in, I'm
 				<span class="text-xl">Kevin</span>

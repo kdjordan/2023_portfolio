@@ -5,25 +5,25 @@ interface Projects {
 }
 
 const projects: Projects[] =[
-  {
-    name: 'Bothsides Construction',
-    description: 'Wordpress site for a construction company.', 
-    link: '/assets/images/bsc.jpg'
-  },
-  {
-    name: 'Ortiz Metals',
-    description: 'Vue 2 site for a local metal artist.', 
-    link: '/assets/images/ortiz.jpg'
-  },
+  // {
+  //   name: 'Bothsides Construction',
+  //   description: 'Wordpress site for a construction company.', 
+  //   link: '/assets/images/bsc.jpg'
+  // },
+  // {
+  //   name: 'Ortiz Metals',
+  //   description: 'Vue 2 site for a local metal artist.', 
+  //   link: '/assets/images/ortiz.jpg'
+  // },
   {
     name: 'Eugene Sculpture Group',
     description: 'Vue 2 site for local sculpters.', 
-    link: '/assets/images/esg.jpg'
+    link: 'place.jpg'
   },
   {
     name: 'VTell',
     description: 'Vue 2 site for MVNO integration.', 
-    link: '/assets/images/vtell.jpg'
+    link: 'place.jpg'
   },
   {
     name: 'Crowdify',

@@ -36,7 +36,7 @@ function toggleOpen() {
         </li>
         <li @click="toggleOpen">
           <a href="./kevin_jordan.pdf" target="_blank" rel="noopener noreferrer"
-            ><button class="border-2 border-highGreen p-4">RESUME</button></a
+            ><button class="border-2 border-highGreen p-4 rounded-md hover:bg-highGreen transition-colors">RESUME</button></a
           >
         </li>
       </ul>
