@@ -30,24 +30,24 @@
 			</button>
 		</div>
 		<span
-			class="block bg-highGreen h-[1px] opacity-40 overflow-visible"
+			class="block bg-highGreen h-[1px] opacity-40 overflow-visibl mb-4"
 		></span>
-		<div class="flex flex-col items-start p-4">
+		<div class="flex flex-col items-start p-4 min-h-[400px]">
 			<div
 				v-for="(job, index) in data"
 				:key="index"
 				id="job"
 				v-show="activeTab === index"
-				class="px-4"
+				class="px-4 gradient-text"
 			>
-				<h2 class="gradient-text text-xl pb-2 uppercase">
+				<h2 class="text-xl pb-2 uppercase">
 					{{ job.title }}
 				</h2>
-				<div class="text-base pl-4 pb-4">{{ job.dates }}</div>
+				<div class="pl-4 pb-4">{{ job.dates }}</div>
 				<div
 					v-for="highlight in job.highlights"
 					:key="highlight"
-					class="text-stone-400 pb-4 pl-4"
+					class="pb-4 pl-4"
 				>
 					<div class="flex items-top">
 						<div class="pr-2">
