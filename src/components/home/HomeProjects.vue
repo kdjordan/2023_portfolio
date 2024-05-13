@@ -10,36 +10,38 @@
 <template>
 	<section
 		id="projects"
-		class="flex flex-col m-auto p-auto"
+		class="flex flex-col pb-[30vh]"
 		style="scroll-margin-top: 100px"
 	>
 		<div
 			class="flex flex-col text-stone-300 pb-[5vh] lg:max-w-[1100px] lg:mx-auto w-full"
 		>
-			<h2 class="text-highGreen self-start pb-[3rem] w-full text-xl">
-				PROJECTS
+			<h2
+				class="flex items-center text-highGreen pb-[3rem] w-full text-xl whitespace-nowrap"
+			>
+				SOME PROJECTS
 				<span
-					class="bg-highGreen h-[1px] ml-4 w-full opacity-40"
+					class="block bg-highGreen h-[1px] ml-4 w-full opacity-40"
 				></span>
 			</h2>
 		</div>
 
-		<div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
+		<div class="pb-10">
 			<div
-				class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 gap-16 text-stone-300 cursor-pointer"
+				class="flex flex-wrap items-center justify-center gap-32 md:gap-24"
 			>
 				<div
 					v-for="(p, index) in projects"
 					:key="index"
-					class="w-64 h-64 max-w-s overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+					class="h-48 w-48"
 				>
-					<img :src="`./image/${p.link}`" alt="project image" />
-					<h3>{{ p.name }}</h3> 
-					<p>{{ p.description }}</p> 
+					<a :href="`${p.link}`" target="_blank" rel="nofollow" >
+						<img :src="`./image/${p.image}`" alt="project image" class="hover:border-xl rounded-lg"/>
+					<h3 class="text-stone-300 pt-4">{{ p.name }}</h3>
+					<div class="gradient-text">{{ p.description }}</div>
+					</a>
 				</div>
 			</div>
 		</div>
 	</section>
 </template>
-
-
