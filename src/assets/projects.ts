@@ -14,13 +14,13 @@ const projects: Projects[] =[
   },
   {
     name: 'Ortiz Metals',
-    description: 'Vue 3 site for a local metal artist.', 
+    description: 'Vue 3 site for a metal artist.', 
     link: 'https://ortizmetals.com/',
     image: 'rso.png'
   },
   {
     name: 'Eugene Sculpture Group',
-    description: 'Vue 2 site for local sculpters.', 
+    description: 'Vue 2 site for sculpters.', 
     link: 'https://eugenesculpturegroup.com/',
     image: 'esg.png'
   },
@@ -30,12 +30,12 @@ const projects: Projects[] =[
     link: 'https://main.d26l5gtfztyujz.amplifyapp.com/',
     image: 'ob.png'
   },
-  // {
-  //   name: 'GRHIIT',
-  //   description: 'Fullstack React', 
-  //   link: 'place.jpg',
-  //   image: 'vtell.png'
-  // },
+  {
+    name: 'GRHIIT',
+    description: 'Fitness App : Fullstack React / WIP', 
+    link: 'https://main.d2sl89tjawpj77.amplifyapp.com/',
+    image: 'grhiit.png'
+  },
   // {
   //   name: 'VTell',
   //   description: 'Vue 2 site for MVNO integration.', 

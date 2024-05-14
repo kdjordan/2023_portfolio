@@ -37,8 +37,8 @@
 				>
 					<a :href="`${p.link}`" target="_blank" rel="nofollow" >
 						<img :src="`./image/${p.image}`" alt="project image" class="hover:border-xl rounded-lg"/>
-					<h3 class="text-stone-300 pt-4">{{ p.name }}</h3>
-					<div class="gradient-text">{{ p.description }}</div>
+					<h3 class="text-highGreen pt-4 pb-2 uppercase">{{ p.name }}</h3>
+					<div class="text-stone-300">{{ p.description }}</div>
 					</a>
 				</div>
 			</div>
