@@ -27,7 +27,6 @@ export default {
 					'0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em #9FF279',
 			},
 			fontSize: {
-				clampLarge: 'clamp(40px, 8vw, 80px)',
 				sizeSm: 'clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem)',
 				sizeBase: 'clamp(1rem, 0.34vi + 0.91rem, 1.19rem)',
 				sizeLg: 'clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem)',

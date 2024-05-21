@@ -27,7 +27,7 @@
 			</div>
 			<div>
 				<div class="flex flex-col text-stone-300 justify-center items-center">
-					<div class="mb-8 text-center gradient-text mb-16">
+					<div class="mb-8 text-center gradient-text lg:mb-16">
 						If you are working on something interesting, I'd like to hear about it.
 					</div>
 					
