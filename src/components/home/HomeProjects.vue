@@ -33,7 +33,7 @@
 				<div
 					v-for="(p, index) in projects"
 					:key="index"
-					class="h-48 w-48"
+					class="h-48 w-48 block mb-4"
 				>
 					<a :href="`${p.link}`" target="_blank" rel="nofollow" >
 						<img :src="`./image/${p.image}`" alt="project image" class="hover:border-xl rounded-lg"/>

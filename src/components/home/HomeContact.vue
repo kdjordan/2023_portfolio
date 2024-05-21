@@ -9,7 +9,7 @@
 <template>
 	<section
 		id="contact"
-		class="flex flex-col justify-center pb-[10vh] "
+		class="flex flex-col justify-center pb-[5vh] "
 		style="scroll-margin-top: 200px"
 	>
 		<div

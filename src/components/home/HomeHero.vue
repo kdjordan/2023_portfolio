@@ -1,22 +1,20 @@
 <template>
 	<section
 		id="hero"
-		class="flex flex-col h-screen justify-center items-center"
+		class="flex flex-col p-[15vh] justify-center items-center"
 	>
 		<div class="flex flex-col text-stone-300 gap-[20px] lg:max-w-[1100px] lg:mx-auto">
 			<div class="text-stone-300">
-				Hello <span id="handWave">👋</span> my name is
+				Hey there <span id="handWave">👋</span> my name is
 			</div>
-			<h1 class="text-clampLarge text-highGreen">Kevin Jordan.</h1>
+			<h1 class="text-size4xl md:text-size4xl lg:text-size6xl text-highGreen whitespace-nowrap">Kevin Jordan.</h1>
 
-			<div class="gradient-text leading-loose">
-				I am an Oregon based software engineer that loves building
-				digital experiences.<br /> 
-				I currently work in the
-				telecommunications industry managing an International VOIP
-				network and a few small teams.<br /> 
-				When I'm not behind the
-				keyboard you can find me in the mountains.
+			<div class="gradient-text leading-loose text-sizeBase pb-[2vh]">
+				I am an Oregon based technologist that loves building
+				software and companies.<br />
+				Currently, I work in the telecommunications industry, managing an both a US domestic and an International VOIP network, with a small, agile team.<br />
+				Outside of work, I'm the creative force behind several entrepreneurial ventures, simply realizing ideas.<br />
+				When I'm not coding, you can find me exploring mountains and beaches.
 			</div>
 			<button
 				class="text-highGreen self-start text-base border-2 p-4 rounded-md transition duration-150 ease-out hover:ease-in hover:bg-sky-900"

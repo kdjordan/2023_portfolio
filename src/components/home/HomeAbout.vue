@@ -10,11 +10,11 @@ onMounted(() => {
 <template>
 	<section 
 		id="about" 
-		class="flex flex-col justify-center pb-[10vh]" 
+		class="flex flex-col justify-center pb-[2vh]" 
 		style="scroll-margin-top: 100px;"
 		>
 		<div
-			class="flex flex-col text-stone-300 pb-[20vh] lg:max-w-[1100px] lg:mx-auto"
+			class="flex flex-col text-stone-300 pb-[2vh] lg:max-w-[1100px] lg:mx-auto"
 		>
 		<h2 class="flex items-center text-highGreen pb-[3rem] w-full text-xl">
 			ABOUT
