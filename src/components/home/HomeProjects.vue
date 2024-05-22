@@ -1,6 +1,7 @@
 <script setup lang="ts">
 	import { onMounted } from 'vue';
 	import { fadeInTextBlock } from '../../animations';
+	import Card from '@/components/Card.vue';
 	import projects from '../../assets/projects.ts';
 
 	onMounted(() => {
@@ -25,21 +26,17 @@
 				></span>
 			</h2>
 		</div>
-
 		<div class="pb-10">
 			<div
-				class="flex flex-wrap items-center justify-center gap-32 md:gap-24"
+				class="flex flex-wrap items-center justify-center gap-8 md:gap-8"
 			>
-				<div
-					v-for="(p, index) in projects"
-					:key="index"
-					class="h-48 w-48 block mb-4"
-				>
-					<a :href="`${p.link}`" target="_blank" rel="nofollow" >
-						<img :src="`./image/${p.image}`" alt="project image" class="hover:border-xl rounded-lg"/>
-					<h3 class="text-highGreen pt-4 pb-2 uppercase">{{ p.name }}</h3>
-					<div class="text-stone-300">{{ p.description }}</div>
-					</a>
+				<div v-for="(p, index) in projects" :key="index">
+					<Card
+						:imgUrl="`./image/${p.image}`"
+						:name="p.name"
+						:description="p.description"
+						:link="p.link"
+					/>
 				</div>
 			</div>
 		</div>

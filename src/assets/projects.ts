@@ -7,16 +7,16 @@ interface Projects {
 
 const projects: Projects[] =[
   {
-    name: 'Bothsides Construction',
-    description: 'Wordpress site for a construction company.', 
-    link:'https://www.bothsidesconstruction.com/',
-    image: 'bsc.png'
-  },
-  {
     name: 'Ortiz Metals',
     description: 'Vue 3 site for a metal artist.', 
     link: 'https://ortizmetals.com/',
     image: 'rso.png'
+  },
+  {
+    name: 'Bothsides Construction',
+    description: 'Wordpress site for a construction company', 
+    link:'https://www.bothsidesconstruction.com/',
+    image: 'bsc.png'
   },
   {
     name: 'Eugene Sculpture Group',
