@@ -1,9 +1,9 @@
 <template>
 	<section
 		id="hero"
-		class="flex flex-col p-[15vh] justify-center items-center"
+		class="flex flex-col py-[15vh] justify-center items-center"
 	>
-		<div class="flex flex-col text-stone-300 gap-[20px] lg:max-w-[1100px] lg:mx-auto">
+		<div class="flex flex-col text-stone-300 lg:max-w-[1100px] lg:mx-auto">
 			<div class="text-stone-300">
 				Hey there <span id="handWave">👋</span> my name is
 			</div>

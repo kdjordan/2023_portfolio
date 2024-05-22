@@ -1,5 +1,5 @@
 <script setup lang="ts">
-	import HomeAbout from '../components/home/HomeAbout.vue';
+	import HomeTechs from '../components/home/HomeTechs.vue';
 	import HomeExperience from '../components/home/HomeExperience.vue';
 	import HomeHero from '../components/home/HomeHero.vue';
 	import HomeProjects from '../components/home/HomeProjects.vue';
@@ -8,7 +8,7 @@
 <template>
 	<div>
 		<HomeHero />
-		<HomeAbout />
+		<HomeTechs />
 		<HomeExperience />
 		<HomeProjects />
 		<HomeContact />

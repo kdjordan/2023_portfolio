@@ -1,40 +1,52 @@
-export interface Projects {
+export type Projects = {
   name: string;
   description: string;
   link: string;
   image: string;
+  techs: string[];
+  github: string | null;
 }
 
 const projects: Projects[] =[
   {
     name: 'Ortiz Metals',
-    description: 'Vue 3 site for a metal artist.', 
+    description: 'Metal artist portfolio.', 
     link: 'https://ortizmetals.com/',
-    image: 'rso.png'
+    image: 'rso.png',
+    techs: ['Vue 3', 'Tailwind CSS', 'GSAP', 'SVG', 'SCSS'],
+    github: 'https://github.com/ortizmetals/ortizmetals.com',
   },
   {
     name: 'Bothsides Construction',
-    description: 'Wordpress site.', 
+    description: 'Builder site.', 
     link:'https://www.bothsidesconstruction.com/',
-    image: 'bsc.png'
+    image: 'bsc.png',
+    techs: ['Wordpress', 'Adobe'],
+    github: null,
   },
   {
     name: 'Eugene Sculpture Group',
-    description: 'Vue 2 site for sculpters.', 
+    description: 'Artist Collective.', 
     link: 'https://eugenesculpturegroup.com/',
-    image: 'esg.png'
+    image: 'esg.png',
+    techs: ['Vue 2', 'Adobe', 'SCSS'],
+    github: 'https://github.com/ortizmetals/ortizmetals.com',
   },
   {
     name: 'Outbound Props',
-    description: 'Vue 3 site for housing projects.', 
+    description: 'Housing Development', 
     link: 'https://main.d26l5gtfztyujz.amplifyapp.com/',
-    image: 'ob.png'
+    image: 'ob.png',
+    techs: ['Vue 3', 'Tailwind CSS'],
+    github: 'https://github.com/ortizmetals/ortizmetals.com',
   },
   {
     name: 'GRHIIT',
-    description: 'Fitness App : Fullstack React / WIP', 
+    description: 'Fitness App', 
     link: 'https://main.d2sl89tjawpj77.amplifyapp.com/',
-    image: 'grhiit.png'
+    image: 'grhiit.png',
+    techs: ['Reat', 'Tailwind CSS', 'Node', 'Postgres'],
+    github: 'https://github.com/ortizmetals/ortizmetals.com',
   },
   // {
   //   name: 'VTell',

@@ -14,7 +14,7 @@
 	<div class="flex flex-col justify-start">
 		<div
 			id="scroller"
-			class="flex gap-4 overflow-x-auto scrollbar w-full text-[16px] font-oswald tracking-widest uppercase"
+			class="flex gap-4 overflow-x-scroll w-full text-[16px] font-oswald tracking-widest uppercase"
 		>
 			<button
 				v-for="(d, index) in data"
@@ -64,6 +64,6 @@
 </template>
 <style scoped>
 	#scroller {
-		scrollbar-color: red important;
+		scrollbar-color: red !important;
 	}
 </style>

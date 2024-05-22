@@ -16,7 +16,7 @@
 			class="flex flex-col text-stone-300 pb-[20vh] lg:max-w-[1100px] lg:mx-auto w-full"
 		>
 			<h2
-				class="flex items-center text-highGreen pb-[3rem] w-full text-xl"
+				class="flex items-center text-highGreen pb-[3rem] w-full text-sizeLg"
 			>
 				CONTACT
 				<span
@@ -35,7 +35,7 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						>
-						<button class="border-2 border-highGreen p-4">DROP IN</button>
+						<button class="text-highGreen self-start text-base border-2 p-4 rounded-md transition duration-150 ease-out hover:ease-in hover:bg-sky-900">DROP IN</button>
 						</a>
 				</div>
 			</div>

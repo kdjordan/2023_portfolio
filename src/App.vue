@@ -13,11 +13,13 @@
 </script>
 
 <template>
+	<div class="text-sizeBase px-[5vw]">
 	<TopNavigation />
-	<main class="mx-4 text-[16px]">
+	<main>
 		<RouterView />
 	</main>
 	<Footer />
+</div>
 </template>
 
 <style>

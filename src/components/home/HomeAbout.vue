@@ -10,21 +10,19 @@ onMounted(() => {
 <template>
 	<section 
 		id="about" 
-		class="flex flex-col justify-center pb-[2vh]" 
+		class="flex flex-col justify-center pb-[15vh]" 
 		style="scroll-margin-top: 100px;"
 		>
 		<div
 			class="flex flex-col text-stone-300 pb-[2vh] lg:max-w-[1100px] lg:mx-auto"
 		>
-		<h2 class="flex items-center text-highGreen pb-[3rem] w-full text-xl">
+		<h2 class="flex items-center text-highGreen pb-[3rem] w-full text-sizeLg">
 			ABOUT
 			<span class="block bg-highGreen h-[1px] ml-4 w-full opacity-40"></span>
 		</h2>
 		<div class="gradient-text pb-4 flex flex-col gap-4 leading-loose">
 			<p class="mb-4">
-				Thanks for checking in, I'm
-				<span class="text-xl">Kevin</span>
-				.<br /> 
+				Thanks for checking in...<br />
 				I've been building things in various industries for a while
 				now, and I'm always up for a challenge. Because of that, I've
 				had to get good at things like : coding, branding, design,

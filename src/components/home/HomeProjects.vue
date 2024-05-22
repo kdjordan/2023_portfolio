@@ -1,8 +1,8 @@
 <script setup lang="ts">
 	import { onMounted } from 'vue';
 	import { fadeInTextBlock } from '../../animations';
-	import Card from '@/components/Card.vue';
 	import projects from '../../assets/projects.ts';
+	import Card from '../Card.vue';
 
 	onMounted(() => {
 		fadeInTextBlock('#projects');
@@ -11,14 +11,14 @@
 <template>
 	<section
 		id="projects"
-		class="flex flex-col pb-[30vh]"
+		class="flex flex-col pb-[15vh]"
 		style="scroll-margin-top: 100px"
 	>
 		<div
 			class="flex flex-col text-stone-300 pb-[5vh] lg:max-w-[1100px] lg:mx-auto w-full"
 		>
 			<h2
-				class="flex items-center text-highGreen pb-[3rem] w-full text-xl whitespace-nowrap"
+				class="flex items-center text-highGreen pb-[3rem] w-full text-sizeLg whitespace-nowrap"
 			>
 				SOME PROJECTS
 				<span
@@ -36,6 +36,8 @@
 						:name="p.name"
 						:description="p.description"
 						:link="p.link"
+						:techs="p.techs"
+						:github="p.github"
 					/>
 				</div>
 			</div>

@@ -23,7 +23,7 @@ function toggleOpen() {
         class="border flex flex-col justify-center items-center gap-y-[20px] fixed top-0 left-0 text-4xl text-modernBlack h-screen w-full"
       >
         <li @click="toggleOpen">
-          <a href="#about">about</a>
+          <a href="#techs">techs</a>
         </li>
         <li @click="toggleOpen">
           <a href="#experience">experience</a>
