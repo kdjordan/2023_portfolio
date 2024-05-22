@@ -1,4 +1,4 @@
-interface Projects {
+export interface Projects {
   name: string;
   description: string;
   link: string;
@@ -14,7 +14,7 @@ const projects: Projects[] =[
   },
   {
     name: 'Bothsides Construction',
-    description: 'Wordpress site for a construction company', 
+    description: 'Wordpress site.', 
     link:'https://www.bothsidesconstruction.com/',
     image: 'bsc.png'
   },
