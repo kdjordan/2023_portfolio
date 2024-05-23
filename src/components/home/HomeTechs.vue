@@ -1,45 +1,13 @@
 <script setup lang="ts">
 	import { onMounted } from 'vue';
 	import { fadeInTextBlock } from '../../animations';
-
+	import { currentTechs, previousTechs } from '../../assets/data/techs';
 	import InfinteScroller from '../InfinteScroller.vue';
-
-	const currentTechs = [
-		'Typescript',
-		'Tailwind',
-		'React',
-		'Vue',
-		'Node',
-		'Express',
-		'Wordpress',
-		'HTML',
-		'CSS',
-		'JS',
-		'Amplify',
-		'AWS',
-		'CI/CD',
-		'ThreeJS',
-		'Adobe',
-		'Postgres',
-	];
-	const previousTechs = [
-		'LAMP',
-		'PHP',
-		'MongoDB',
-		'DynamoDB',
-		'Serverless',
-		'C++',
-		'MS',
-		'Wordpress',
-		'SCSS',
-		'JAVA',
-		'MySQL',
-		'SQL'
-	];
 
 	onMounted(() => {
 		fadeInTextBlock('#techs');
 	});
+
 </script>
 <template>
 	<section

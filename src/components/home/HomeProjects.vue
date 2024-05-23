@@ -1,7 +1,7 @@
 <script setup lang="ts">
 	import { onMounted } from 'vue';
 	import { fadeInTextBlock } from '../../animations';
-	import projects from '../../assets/projects.ts';
+	import projects from '../../assets/data/projects.ts';
 	import Card from '../Card.vue';
 
 	onMounted(() => {

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 	import { ref } from 'vue';
-	import data from '../assets/data.ts';
+	import { jobs } from '../assets/data/jobs.ts';
 	import { animateJobChange } from '../animations.ts';
 	const activeTab = ref<number>(0);
 
@@ -17,7 +17,7 @@
 			class="flex gap-4 overflow-x-scroll w-full text-[16px] font-oswald tracking-widest uppercase"
 		>
 			<button
-				v-for="(d, index) in data"
+				v-for="(d, index) in jobs"
 				:key="index"
 				@click="changeTab(index)"
 				:class="{
@@ -34,7 +34,7 @@
 		></span>
 		<div class="flex flex-col items-start p-4 min-h-[400px]">
 			<div
-				v-for="(job, index) in data"
+				v-for="(job, index) in jobs"
 				:key="index"
 				id="job"
 				v-show="activeTab === index"

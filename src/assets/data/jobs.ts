@@ -6,7 +6,7 @@ interface Job {
   highlights: string[];
 }
 
-const data: Job[] = [
+export const jobs: Job[] = [
   {
     employer: 'V-tell',
     title : 'VP Wholesale Services',
@@ -56,4 +56,3 @@ const data: Job[] = [
   
 ]
 
-export default data
