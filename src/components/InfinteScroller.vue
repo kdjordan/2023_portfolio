@@ -28,9 +28,9 @@ onMounted(() => {
 			<li
 				v-for="(el, index) in arr"
 				:key="index"
-				class="inline-block  uppercase text-highGreen text-sizeLg border-2 border-highGreen p-2 rounded-lg bg-sky-900"
+				class="flex items-center gap-2 uppercase text-highGreen text-sizeLg border-2 border-highGreen p-2 rounded-lg bg-sky-900"
 			>
-				{{ el }}
+      <span>🤟 </span>{{ el }}
 			</li>
 		</ul>
 	</div>
