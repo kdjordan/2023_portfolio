@@ -1,15 +1,21 @@
 <script setup lang="ts">
 	import { onMounted } from 'vue';
+  import { emojis } from '../assets/data/techs';
 
 onMounted(() => {
-  
   const scrollers: NodeListOf<Element> | null = document.querySelectorAll('.scroller');
   scrollers.forEach(scroller => {
     scroller.setAttribute("data-animated", "true")
   })
+
+
 })
 
- 
+ function getRandomEmoji() {
+  const randomIndex = Math.floor(Math.random() * emojis.length);
+  return emojis[randomIndex];
+ }
+
 	defineProps<{
 		arr: string[];
     direction: 'right' | 'left';
@@ -30,7 +36,7 @@ onMounted(() => {
 				:key="index"
 				class="flex items-center gap-2 uppercase text-highGreen text-sizeLg border-2 border-highGreen p-2 rounded-lg bg-sky-900"
 			>
-      <span>🤟 </span>{{ el }}
+      <span>{{ getRandomEmoji() }} </span>{{ el }}
 			</li>
 		</ul>
 	</div>
