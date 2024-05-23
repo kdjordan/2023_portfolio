@@ -53,3 +53,8 @@ export function fadeInTextBlock(selector: string) {
 		start: '25% 75%'
 	}})
 }
+
+export function horozontilScrolling( items: string[]) {
+  console.log(items)
+
+}

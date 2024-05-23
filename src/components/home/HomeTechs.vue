@@ -2,19 +2,24 @@
 import { onMounted } from 'vue';
 import { fadeInTextBlock } from '../../animations';
 
+import InfinteScroller from '../InfinteScroller.vue';
+
+const currentTechs = ['Typescript', 'Tailwind', 'React', 'Vue', 'Node', 'Express', 'Wordpress', 'HTML', 'CSS', 'JS', 'Amplify', 'AWS', 'CI/CD', 'ThreeJS', 'Adobe']
+const previousTechs = ['PHP', 'C++', 'MS', 'Wordpress', 'SCSS', 'JAVA']
+
 onMounted(() => {
-	fadeInTextBlock('#about')
+	fadeInTextBlock('#techs')
 })
 
 </script>
 <template>
 	<section 
 		id="techs" 
-		class="flex flex-col justify-center pb-[15vh] w-full" 
+		class="flex flex-col justify-center pb-[15vh]" 
 		style="scroll-margin-top: 100px;"
 		>
 		<div
-			class="flex flex-col text-stone-300 pb-[2vh] lg:max-w-[1100px] lg:mx-auto"
+			class="flex flex-col text-stone-300 pb-[2vh] lg:max-w-[1100px] lg:mx-auto w-full"
 		>
 		<h2 class="flex items-center text-highGreen pb-[3rem] w-full text-sizeLg">
 			TECHS
@@ -25,12 +30,15 @@ onMounted(() => {
 		</div>
 		<div>
 			<div class="flex flex-col text-stone-300">
-				<div class="mb-8">
+				<!-- <div class="mb-8">
 					Here are the techs that I've been working with lately
 					:
-				</div>
+				</div> -->
 				<div>
-					<ul
+				<InfinteScroller :arr="currentTechs" direction="right" :speed=50 />
+				<div class="py-4"></div>
+				<InfinteScroller :arr="previousTechs" direction="left" :speed=20 />
+					<!-- <ul
 						class="grid grid-cols-2 gap-x-16 gap-y-2 p-0 list-none overflow-hidden"
 					>
 						<li><span>🤟 </span>JavaScript</li>
@@ -43,7 +51,7 @@ onMounted(() => {
 						<li><span>🤟 </span>Amplify</li>
 						<li><span>🤟 </span>Postgres</li>
 						<li><span>🤟 </span>Wordpress</li>
-					</ul>
+					</ul> -->
 				</div>
 			</div>
 		</div>
