@@ -12,7 +12,7 @@ export const jobs: Job[] = [
     title : 'VP Wholesale Services',
     brief : 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
     dates : '2019-Present',
-    highlights: ['Enhanced infrastructure utilization, achieving a 50% reduction in overhead costs.', 'Developed a tax reporting system that decreased staff hours by 25%.', 'Coordinated projects between 3 International Teams.', 'Innovated sales strategies for agents, setting revenue on a path to $3 million annually.', 'Designed and developed a customer payment portal.', 'Played a key role in the design of a global MVNO.']
+    highlights: ['Enhanced infrastructure utilization, achieving a 50% reduction in overhead costs.', 'Developed a tax reporting system that decreased staff hours by 25%.', 'Coordinated projects between 3 International Teams.', 'Designed and developed a customer payment portal.']
   },
   {
     employer: 'NW Straps',
