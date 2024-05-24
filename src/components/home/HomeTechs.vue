@@ -1,13 +1,15 @@
 <script setup lang="ts">
 	import { onMounted } from 'vue';
 	import { fadeInTextBlock } from '../../animations';
-	import { currentTechs, previousTechs } from '../../assets/data/techs';
+	import {
+		currentTechs,
+		previousTechs,
+	} from '../../assets/data/techs';
 	import InfinteScroller from '../InfinteScroller.vue';
 
 	onMounted(() => {
 		fadeInTextBlock('#techs');
 	});
-
 </script>
 <template>
 	<section
@@ -19,25 +21,26 @@
 			class="flex flex-col text-stone-300 pb-[2vh] lg:max-w-[1100px] lg:mx-auto w-full"
 		>
 			<h2
-				class="flex items-center text-highGreen pb-[3rem] w-full text-sizeLg"
+				class="flex items-center text-highGreen pb-[3rem] w-full text-sizeLg whitespace-nowrap"
 			>
-				TECHS
+				TECHS I'VE USED
 				<span
 					class="block bg-highGreen h-[1px] ml-4 w-full opacity-40"
 				></span>
 			</h2>
+
 			<div>
 				<div class="flex flex-col text-stone-300">
 					<div>
 						<InfinteScroller
 							:arr="currentTechs"
 							direction="right"
-							:speed="50"
+							:speed="70"
 						/>
 						<InfinteScroller
 							:arr="previousTechs"
 							direction="left"
-							:speed="20"
+							:speed="70"
 						/>
 					</div>
 				</div>

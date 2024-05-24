@@ -14,7 +14,7 @@ const projects: Projects[] =[
     link: 'https://ortizmetals.com/',
     image: 'rso.png',
     techs: ['Vue 3', 'Tailwind CSS', 'GSAP', 'SVG', 'SCSS'],
-    github: 'https://github.com/ortizmetals/ortizmetals.com',
+    github: 'https://github.com/kdjordan/ortiz_v2',
   },
   {
     name: 'Bothsides Construction',
@@ -30,15 +30,15 @@ const projects: Projects[] =[
     link: 'https://eugenesculpturegroup.com/',
     image: 'esg.png',
     techs: ['Vue 2', 'Adobe', 'SCSS'],
-    github: 'https://github.com/ortizmetals/ortizmetals.com',
+    github: 'https://github.com/kdjordan/esgroup',
   },
   {
     name: 'Outbound Props',
-    description: 'Housing Development', 
+    description: 'Housing Development.', 
     link: 'https://main.d26l5gtfztyujz.amplifyapp.com/',
     image: 'ob.png',
     techs: ['Vue 3', 'Tailwind CSS'],
-    github: 'https://github.com/ortizmetals/ortizmetals.com',
+    github: 'https://github.com/kdjordan/outboundProps',
   },
   {
     name: 'GRHIIT',
@@ -46,7 +46,7 @@ const projects: Projects[] =[
     link: 'https://main.d2sl89tjawpj77.amplifyapp.com/',
     image: 'grhiit.png',
     techs: ['Reat', 'Tailwind CSS', 'Node', 'Postgres'],
-    github: 'https://github.com/ortizmetals/ortizmetals.com',
+    github: 'https://github.com/kdjordan/grhiit',
   },
   // {
   //   name: 'VTell',
