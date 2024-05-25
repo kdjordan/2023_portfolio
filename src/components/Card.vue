@@ -22,7 +22,15 @@
 			>
 				{{ description }}
 			</p>
-			<div class="flex flex-wrap items-center gap-2 text-highGreen pt-4">
+			<p
+				v-if="notes"
+				class="text-sizeSm font-oswald text-fontWhite tracking-wider"
+			>
+				{{ `#${notes}` }}
+			</p>
+			<div
+				class="flex flex-wrap items-center gap-2 text-highGreen pt-4"
+			>
 				<span
 					v-for="(t, i) in techs"
 					:key="i"
@@ -32,7 +40,7 @@
 				</span>
 			</div>
 		</div>
-		<div class="flex justify-between items-center p-4">
+		<div class="flex gap-4 items-center p-4">
 			<a
 				:href="link"
 				target="_blank"
@@ -61,9 +69,8 @@
 				:href="github"
 				target="_blank"
 				rel="noopener noreferrer"
-				
 			>
-				<svg 
+				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="40"
 					height="40"
@@ -82,6 +89,8 @@
 </template>
 
 <script setup lang="ts">
+	import { onMounted } from 'vue';
+
 	defineProps<{
 		imgUrl: string;
 		name: string;
@@ -89,11 +98,16 @@
 		link: string;
 		techs: string[];
 		github: string | null;
+		notes?: string;
 	}>();
+
+	onMounted(() => {
+		console.log('here');
+	});
 </script>
 
 <style scoped>
-#github {
-	vertical-align: middle;
-}
+	#github {
+		vertical-align: middle;
+	}
 </style>

@@ -11,7 +11,7 @@
 <template>
 	<section
 		id="projects"
-		class="flex flex-col pb-[15vh]"
+		class="flex flex-col pb-[15vh] overflow-x-scroll"
 		style="scroll-margin-top: 100px"
 	>
 		<div
@@ -20,15 +20,15 @@
 			<h2
 				class="flex items-center text-highGreen pb-[3rem] w-full text-sizeLg whitespace-nowrap"
 			>
-				SOME PROJECTS
+				SOME THINGS I'VE BUILT
 				<span
 					class="block bg-highGreen h-[1px] ml-4 w-full opacity-40"
 				></span>
 			</h2>
 		</div>
-		<div class="pb-10">
+		<div class="pb-10 flex justify-center overflow-x-scroll" id="scroller">
 			<div
-				class="flex flex-wrap items-center justify-center gap-8 md:gap-8"
+				class="flex flex-nowrap gap-4"
 			>
 				<div v-for="(p, index) in projects" :key="index">
 					<Card
@@ -38,9 +38,11 @@
 						:link="p.link"
 						:techs="p.techs"
 						:github="p.github"
+						:notes="p.notes"
 					/>
 				</div>
 			</div>
 		</div>
 	</section>
 </template>
+

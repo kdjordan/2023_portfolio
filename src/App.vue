@@ -31,4 +31,8 @@
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
+	#scroller {
+	scrollbar-color: #9FF279 transparent;
+  scrollbar-width: thin;
+}
 </style>
