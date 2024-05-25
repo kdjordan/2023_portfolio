@@ -13,13 +13,13 @@
 </script>
 
 <template>
-	<div class="text-sizeBase px-[5vw]">
-	<TopNavigation />
-	<main>
-		<RouterView />
-	</main>
-	<Footer />
-</div>
+	<div class="text-sizeBase px-[5vw] lg:max-w-7xl mx-auto">
+		<TopNavigation />
+		<main>
+			<RouterView />
+		</main>
+		<Footer />
+	</div>
 </template>
 
 <style>
@@ -31,8 +31,28 @@
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
-	#scroller {
-	scrollbar-color: #9FF279 transparent;
-  scrollbar-width: thin;
-}
+	#scrollerContainer {
+		width: max-content;
+		justify-content: center;
+	}
+	.scroller {
+		scrollbar-color: #9ff279 transparent;
+		scrollbar-width: thin;
+	}
+
+	.shimmer {
+		color: transparent;
+		background: linear-gradient(to right, #9FF279 0%, #F2EFE9 50%, #9FF279 100%);
+    background-size: 300%;
+    background-clip: text;
+		background-position-x: 100%;
+    -webkit-background-clip: text; /* Required for some browsers */
+    animation: shimmer 3s infinite linear;
+	}
+
+	@keyframes shimmer {
+		to {
+			background-position-x: 0%;
+		}
+	}
 </style>

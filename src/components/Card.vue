@@ -101,9 +101,6 @@
 		notes?: string;
 	}>();
 
-	onMounted(() => {
-		console.log('here');
-	});
 </script>
 
 <style scoped>

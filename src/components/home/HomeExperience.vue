@@ -11,7 +11,7 @@
 <template>
 	<section id="experience" style="scroll-margin-top: 100px;" class="pb-[5vh]">
 		<div
-		class="flex flex-col text-stone-300 pb-[5vh] lg:max-w-[1100px] lg:mx-auto w-full"
+		class="flex flex-col text-stone-300 pb-[5vh] w-full"
 		>
 		<h2 class="flex items-center text-highGreen pb-[3rem] w-full text-sizeLg">
 			EXPERIENCE

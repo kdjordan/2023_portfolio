@@ -15,7 +15,7 @@
 		style="scroll-margin-top: 100px"
 	>
 		<div
-			class="flex flex-col text-stone-300 pb-[5vh] lg:max-w-[1100px] lg:mx-auto w-full"
+			class="flex flex-col text-stone-300 pb-[5vh] w-full"
 		>
 			<h2
 				class="flex items-center text-highGreen pb-[3rem] w-full text-sizeLg whitespace-nowrap"
@@ -26,9 +26,10 @@
 				></span>
 			</h2>
 		</div>
-		<div class="pb-10 flex justify-center overflow-x-scroll" id="scroller">
+		<div class="pb-10 flex overflow-x-scroll scroller" >
 			<div
 				class="flex flex-nowrap gap-4"
+				id="scrollerContainer"
 			>
 				<div v-for="(p, index) in projects" :key="index">
 					<Card
