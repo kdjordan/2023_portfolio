@@ -5,7 +5,7 @@
 	>
 		<div class="flex flex-col text-stone-300">
 			<div class="text-stone-300">
-				Hey there <span id="handWave">👋</span> my name is
+				Hi there <span id="handWave">👋</span> my name is
 			</div>
 			<h1 class="lg:text-size6xl text-size5xl whitespace-nowrap">
 			
