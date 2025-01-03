@@ -23,7 +23,13 @@ export function useNavigationAnimation() {
           },
         })
         .add('navComplete')
-        .add(animateHero, '+=0.3');
+        .call(
+          () => {
+            animateHero();
+          },
+          [],
+          '+=0.3'
+        );
     });
   };
 

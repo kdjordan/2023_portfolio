@@ -1,7 +1,9 @@
 <template>
   <div
     class="section-breaker relative w-full h-[200px] flex items-center justify-center my-32 transition-all duration-700"
-    :class="{ 'opacity-0 translate-y-10': !hasScrolled, 'opacity-100 translate-y-0': hasScrolled }"
+    :class="
+      useScrollAnimation ? { 'opacity-0 translate-y-10': !hasScrolled, 'opacity-100 translate-y-0': hasScrolled } : {}
+    "
     ref="sectionRef"
   >
     <!-- Fixed Center Letter Container -->
@@ -39,6 +41,7 @@
   const props = defineProps<{
     text: string;
     centerLetter?: string;
+    useScrollAnimation?: boolean;
   }>();
 
   const textCircle = ref<HTMLElement | null>(null);
@@ -55,13 +58,22 @@
   });
 
   const handleScroll = () => {
-    if (window.scrollY > 0) {
+    if (!sectionRef.value) return;
+
+    const rect = sectionRef.value.getBoundingClientRect();
+    const triggerPoint = window.innerHeight * 0.8; // Show when element is 80% up the screen
+
+    if (rect.top < triggerPoint) {
       hasScrolled.value = true;
     }
   };
 
   onMounted(() => {
-    window.addEventListener('scroll', handleScroll);
+    if (props.useScrollAnimation) {
+      window.addEventListener('scroll', handleScroll);
+      // Check initial position
+      handleScroll();
+    }
 
     if (textCircle.value) {
       tl.value = gsap.timeline({ repeat: -1 }).to(textCircle.value, {
@@ -79,7 +91,9 @@
   });
 
   onUnmounted(() => {
-    window.removeEventListener('scroll', handleScroll);
+    if (props.useScrollAnimation) {
+      window.removeEventListener('scroll', handleScroll);
+    }
   });
 </script>
 

@@ -6,13 +6,19 @@
   const hasScrolled = ref(false);
 
   const handleScroll = () => {
-    if (window.scrollY > 0) {
+    if (!experienceRef.value) return;
+
+    const rect = experienceRef.value.getBoundingClientRect();
+    const triggerPoint = window.innerHeight * 0.8;
+
+    if (rect.top < triggerPoint) {
       hasScrolled.value = true;
     }
   };
 
   onMounted(() => {
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial position
   });
 
   onUnmounted(() => {
@@ -21,11 +27,12 @@
 </script>
 
 <template>
-  <div
+  <section
+    ref="experienceRef"
+    id="experience"
     class="w-full flex flex-col transition-all duration-700"
     :class="{ 'opacity-0 translate-y-10': !hasScrolled, 'opacity-100 translate-y-0': hasScrolled }"
-    id="experience"
-    ref="experienceRef"
+    style="scroll-margin-top: 350px"
   >
     <!-- Each job row -->
     <div
@@ -40,5 +47,5 @@
         {{ job.title }}
       </div>
     </div>
-  </div>
+  </section>
 </template>

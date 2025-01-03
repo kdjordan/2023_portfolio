@@ -2,17 +2,21 @@
   import { onMounted } from 'vue';
   import { useHeroAnimation } from '@/composables/animations/useHeroAnimation';
 
+  const emit = defineEmits(['animationComplete']);
   const { animateHero } = useHeroAnimation();
 
   onMounted(() => {
-    animateHero();
+    // Create a promise that resolves when the hero animation is done
+    animateHero().then(() => {
+      emit('animationComplete');
+    });
   });
 </script>
 
 <template>
   <section
     id="hero"
-    class="flex flex-col max-h-[750px] w-full px-4 pt-32 md:pt-40"
+    class="flex flex-col max-h-[750px] w-full px-4 pt-32 md:pt-40 pb-32"
   >
     <div class="flex flex-col w-full">
       <h1 class="flex flex-col text-primary-white font-arial">

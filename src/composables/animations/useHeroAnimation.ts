@@ -37,6 +37,42 @@ export function useHeroAnimation() {
   const skillWords = shuffleArray(baseSkillWords);
   const wordTimelines: gsap.core.Timeline[] = [];
 
+  const animateHero = () => {
+    return new Promise<void>(resolve => {
+      timeline
+        .to('#hero h1 div:first-child .letter', {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: 'power4.out',
+        })
+        .to(
+          '#hero h1 div:last-child .letter',
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: 'power4.out',
+          },
+          '-=0.4'
+        )
+        .to('#job', {
+          opacity: 1,
+          duration: 0.1,
+          onComplete: () => {
+            const wordElement = document.querySelector('#job .word');
+            if (wordElement) {
+              wordElement.textContent = skillWords[wordIndex];
+              animateWord(wordElement);
+              resolve();
+            }
+          },
+        });
+    });
+  };
+
   const animateWord = (wordElement: Element, isFirst = false) => {
     const currentWord = skillWords[wordIndex];
     const el = wordElement as HTMLElement;
@@ -88,42 +124,6 @@ export function useHeroAnimation() {
       });
 
     wordTimelines.push(wordTimeline);
-  };
-
-  const animateHero = () => {
-    timeline
-      .to('#hero h1 div:first-child .letter', {
-        y: 0,
-        opacity: 1,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: 'power4.out',
-      })
-      .to(
-        '#hero h1 div:last-child .letter',
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
-          stagger: 0.1,
-          ease: 'power4.out',
-        },
-        '-=0.4'
-      )
-      .to(
-        '#job',
-        {
-          opacity: 1,
-          duration: 0.1,
-        },
-        '+=0.2'
-      )
-      .add(() => {
-        const wordElement = document.querySelector('#job .word');
-        if (wordElement) {
-          animateWord(wordElement, true);
-        }
-      });
   };
 
   onBeforeUnmount(() => {
