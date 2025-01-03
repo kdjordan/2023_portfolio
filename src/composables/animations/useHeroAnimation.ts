@@ -42,7 +42,9 @@ function scrambleText(finalText: string, progress: number): string {
 }
 
 export function useHeroAnimation() {
-  const timeline = gsap.timeline();
+  const timeline = gsap.timeline({
+    delay: 1.2,
+  });
   let scrambleInterval: number;
   let wordIndex = 0;
   const skillWords = shuffleArray(baseSkillWords);
@@ -60,10 +62,8 @@ export function useHeroAnimation() {
         clearInterval(scrambleInterval);
         jobElement.textContent = finalText;
 
-        // Schedule next word
         setTimeout(() => {
           wordIndex = (wordIndex + 1) % skillWords.length;
-          // Reshuffle when we've gone through all words
           if (wordIndex === 0) {
             shuffleArray(skillWords);
           }
@@ -75,32 +75,23 @@ export function useHeroAnimation() {
 
   const animateHero = () => {
     timeline
-      .fromTo(
-        '#hero h1 div:first-child span',
+      .to('#hero h1 div:first-child .letter', {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: 'power4.out',
+      })
+      .to(
+        '#hero h1 div:last-child .letter',
         {
-          clipPath: 'inset(100% 0 0 0)',
-          y: 50,
-        },
-        {
-          clipPath: 'inset(0% 0 0 0)',
           y: 0,
+          opacity: 1,
           duration: 0.8,
-          ease: 'cubic-bezier(0.7, 0, 0.1, 5)',
-        }
-      )
-      .fromTo(
-        '#hero h1 div:last-child span',
-        {
-          clipPath: 'inset(100% 0 0 0)',
-          y: 50,
+          stagger: 0.1,
+          ease: 'power4.out',
         },
-        {
-          clipPath: 'inset(0% 0 0 0)',
-          y: 0,
-          duration: 0.8,
-          ease: 'cubic-bezier(0.7, 0, 0.1, 1.5)',
-        },
-        '+=0.1'
+        '-=0.4'
       )
       .add(() => {
         const jobElement = document.querySelector('#job');

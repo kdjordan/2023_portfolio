@@ -1,25 +1,39 @@
 <script setup lang="ts">
-  // We don't need to call useHeroAnimation here anymore since it's handled by the navigation animation
-  // import { useHeroAnimation } from '@/composables/animations/useHeroAnimation';
-  // useHeroAnimation();
+  import { onMounted } from 'vue';
+  import { useHeroAnimation } from '@/composables/animations/useHeroAnimation';
+
+  const { animateHero } = useHeroAnimation();
+
+  onMounted(() => {
+    animateHero();
+  });
 </script>
 
 <template>
   <section
     id="hero"
-    class="flex flex-col min-h-screen w-full px-4 bg-bg-primary pt-32 md:pt-40"
+    class="flex flex-col max-h-[750px] w-full px-4 bg-bg-primary pt-32 md:pt-40"
   >
     <div class="flex flex-col w-full">
       <h1 class="flex flex-col text-primary-white font-arial">
         <div class="overflow-hidden">
-          <span class="text-[15vw] md:text-[12vw] uppercase leading-[0.9] tracking-tighter block name-reveal"
-            >Kevin</span
-          >
+          <span class="text-[15vw] md:text-[12vw] uppercase leading-[0.9] tracking-tighter block name-reveal">
+            <span class="letter">K</span>
+            <span class="letter">E</span>
+            <span class="letter">V</span>
+            <span class="letter">I</span>
+            <span class="letter">N</span>
+          </span>
         </div>
         <div class="overflow-hidden self-end">
-          <span class="text-[15vw] md:text-[12vw] uppercase leading-[0.9] tracking-tighter block name-reveal"
-            >Jordan</span
-          >
+          <span class="text-[15vw] md:text-[12vw] uppercase leading-[0.9] tracking-tighter block name-reveal">
+            <span class="letter">J</span>
+            <span class="letter">O</span>
+            <span class="letter">R</span>
+            <span class="letter">D</span>
+            <span class="letter">A</span>
+            <span class="letter">N</span>
+          </span>
         </div>
       </h1>
       <div
@@ -41,8 +55,13 @@
     opacity: 0;
   }
 
+  .letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
   .name-reveal {
-    clip-path: inset(100% 0 0 0);
     transform: translateY(0);
   }
 </style>

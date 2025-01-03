@@ -1,16 +1,23 @@
 <script setup lang="ts">
-	import HomeTechs from '../components/home/HomeTechs.vue';
-	import HomeExperience from '../components/home/HomeExperience.vue';
-	import HomeHero from '../components/home/HomeHero.vue';
-	import HomeProjects from '../components/home/HomeProjects.vue';
-	import HomeContact from '../components/home/HomeContact.vue';
+  import TheExperience from '../components/home/TheExperience.vue';
+  import HomeHero from '../components/home/HomeHero.vue';
+  import HomeProjects from '../components/home/HomeProjects.vue';
+  import HomeContact from '../components/home/HomeContact.vue';
+  import SectionBreaker from '../components/SectionBreaker.vue';
 </script>
 <template>
-	<div>
-		<HomeHero />
-		<HomeTechs />
-		<HomeExperience />
-		<HomeProjects />
-		<HomeContact />
-	</div>
+  <div>
+    <HomeHero />
+    <SectionBreaker
+      text="The Experinece"
+      centerLetter="E"
+    />
+    <TheExperience />
+	<SectionBreaker
+      text="The Projects"
+      centerLetter="P"
+    />
+    <HomeProjects />
+    <HomeContact />
+  </div>
 </template>
