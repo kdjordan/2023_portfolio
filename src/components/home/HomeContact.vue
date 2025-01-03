@@ -9,15 +9,10 @@
 <template>
   <section
     id="contact"
-    class="flex flex-col justify-center pb-[5vh]"
+    class="flex flex-col justify-center"
     style="scroll-margin-top: 200px"
   >
-    <div class="flex flex-col text-gray-200 pb-[20vh] w-full">
-      <h2 class="flex items-center text-primary-white pb-[3rem] w-full text-sizeLg">
-        CONTACT
-        <span class="block bg-gray-200 h-[1px] ml-4 w-full opacity-40"></span>
-      </h2>
-      <div class="mb-4"></div>
+    <div class="flex flex-col  w-full mb-32">
       <div>
         <div class="flex flex-col text-gray-200 justify-center items-center">
           <div class="mb-8 text-center gradient-text lg:mb-16">

@@ -47,7 +47,7 @@
   const hasScrolled = ref(false);
 
   const circularText = computed(() => {
-    return (props.text + ' ' + props.text).toUpperCase().split('');
+    return (props.text + ' ' + props.text + ' ').toUpperCase().split('');
   });
 
   const rotationPerLetter = computed(() => {

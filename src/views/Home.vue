@@ -1,7 +1,6 @@
 <script setup lang="ts">
   import TheExperience from '../components/home/HomeExperience.vue';
   import HomeHero from '../components/home/HomeHero.vue';
-  import HomeProjects from '../components/home/HomeProjects.vue';
   import HomeContact from '../components/home/HomeContact.vue';
   import SectionBreaker from '../components/SectionBreaker.vue';
 </script>
@@ -14,10 +13,9 @@
     />
     <TheExperience />
 	<SectionBreaker
-      text="The Projects"
-      centerLetter="P"
+      text="The Contacts"
+      centerLetter="C"
     />
-    <HomeProjects />
     <HomeContact />
   </div>
 </template>
