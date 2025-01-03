@@ -1,7 +1,6 @@
 import { onBeforeUnmount } from 'vue';
 import gsap from 'gsap';
 
-const chars = '!<>-_\\/[]{}—=+*^?#________';
 const baseSkillWords = [
   'DEVELOP',
   'DESIGN',
@@ -21,7 +20,6 @@ const baseSkillWords = [
   'LIFT',
 ];
 
-// Fisher-Yates shuffle algorithm
 function shuffleArray<T>(array: T[]): T[] {
   const shuffled = [...array];
   for (let i = shuffled.length - 1; i > 0; i--) {
@@ -31,46 +29,65 @@ function shuffleArray<T>(array: T[]): T[] {
   return shuffled;
 }
 
-function scrambleText(finalText: string, progress: number): string {
-  const length = finalText.length;
-  return Array.from({ length }, (_, i) => {
-    if (progress >= i / length) {
-      return finalText[i];
-    }
-    return chars[Math.floor(Math.random() * chars.length)];
-  }).join('');
-}
-
 export function useHeroAnimation() {
   const timeline = gsap.timeline({
     delay: 1.2,
   });
-  let scrambleInterval: number;
   let wordIndex = 0;
   const skillWords = shuffleArray(baseSkillWords);
+  const wordTimelines: gsap.core.Timeline[] = [];
 
-  const animateWord = (jobElement: Element) => {
-    let progress = 0;
-    const finalText = `>>> ${skillWords[wordIndex]}`;
-    jobElement.textContent = scrambleText(finalText, 0);
+  const animateWord = (wordElement: Element, isFirst = false) => {
+    const currentWord = skillWords[wordIndex];
+    const el = wordElement as HTMLElement;
 
-    scrambleInterval = window.setInterval(() => {
-      progress += 0.1;
-      jobElement.textContent = scrambleText(finalText, progress);
+    if (isFirst) {
+      el.style.opacity = '0';
+      el.textContent = currentWord;
 
-      if (progress >= 1) {
-        clearInterval(scrambleInterval);
-        jobElement.textContent = finalText;
+      timeline.to(el, {
+        opacity: 1,
+        duration: 0.4,
+        onComplete: () => {
+          setTimeout(() => {
+            wordIndex = (wordIndex + 1) % skillWords.length;
+            animateWord(wordElement, false);
+          }, 2000);
+        },
+      });
+      return;
+    }
 
-        setTimeout(() => {
-          wordIndex = (wordIndex + 1) % skillWords.length;
-          if (wordIndex === 0) {
-            shuffleArray(skillWords);
-          }
-          animateWord(jobElement);
-        }, 2000);
-      }
-    }, 50);
+    const wordTimeline = gsap
+      .timeline()
+      .to(el, {
+        duration: 0.6,
+        rotateX: -90,
+        opacity: 0,
+        transformOrigin: 'center center',
+        transformPerspective: 1000,
+        ease: 'power2.in',
+      })
+      .call(() => {
+        el.textContent = currentWord;
+      })
+      .to(el, {
+        duration: 0.6,
+        rotateX: 0,
+        opacity: 1,
+        ease: 'power2.out',
+        onComplete: () => {
+          setTimeout(() => {
+            wordIndex = (wordIndex + 1) % skillWords.length;
+            if (wordIndex === 0) {
+              shuffleArray(skillWords);
+            }
+            animateWord(wordElement);
+          }, 2000);
+        },
+      });
+
+    wordTimelines.push(wordTimeline);
   };
 
   const animateHero = () => {
@@ -93,20 +110,25 @@ export function useHeroAnimation() {
         },
         '-=0.4'
       )
+      .to(
+        '#job',
+        {
+          opacity: 1,
+          duration: 0.1,
+        },
+        '+=0.2'
+      )
       .add(() => {
-        const jobElement = document.querySelector('#job');
-        if (jobElement) {
-          gsap.to(jobElement, { opacity: 1, duration: 0.1 });
-          animateWord(jobElement);
+        const wordElement = document.querySelector('#job .word');
+        if (wordElement) {
+          animateWord(wordElement, true);
         }
-      }, '+=0.2');
+      });
   };
 
   onBeforeUnmount(() => {
     timeline.kill();
-    if (scrambleInterval) {
-      clearInterval(scrambleInterval);
-    }
+    wordTimelines.forEach(tl => tl.kill());
   });
 
   return {

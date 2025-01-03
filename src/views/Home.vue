@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import TheExperience from '../components/home/TheExperience.vue';
+  import TheExperience from '../components/home/HomeExperience.vue';
   import HomeHero from '../components/home/HomeHero.vue';
   import HomeProjects from '../components/home/HomeProjects.vue';
   import HomeContact from '../components/home/HomeContact.vue';

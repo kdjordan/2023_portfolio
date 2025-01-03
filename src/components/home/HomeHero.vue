@@ -12,7 +12,7 @@
 <template>
   <section
     id="hero"
-    class="flex flex-col max-h-[750px] w-full px-4 bg-bg-primary pt-32 md:pt-40"
+    class="flex flex-col max-h-[750px] w-full px-4 pt-32 md:pt-40"
   >
     <div class="flex flex-col w-full">
       <h1 class="flex flex-col text-primary-white font-arial">
@@ -40,7 +40,8 @@
         id="job"
         class="text-primary-white text-xl md:text-2xl mt-8 tracking-widest font-mono"
       >
-        >>> DEVELOP
+        <span class="prefix">>>> </span>
+        <span class="word"></span>
       </div>
     </div>
   </section>
@@ -63,5 +64,11 @@
 
   .name-reveal {
     transform: translateY(0);
+  }
+
+  #job .word {
+    display: inline-block;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
   }
 </style>

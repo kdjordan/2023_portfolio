@@ -1,19 +1,44 @@
 <script setup lang="ts">
-	import TabbedIndex from '../TabbedIndex.vue';
-	import { onMounted } from 'vue';
-	import { fadeInTextBlock } from '../../animations';
+  import { ref, onMounted, onUnmounted } from 'vue';
+  import { jobs } from '../../assets/data/jobs';
 
-	onMounted(() => {
-		fadeInTextBlock('#experience');
-	});
+  const experienceRef = ref<HTMLElement | null>(null);
+  const hasScrolled = ref(false);
 
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      hasScrolled.value = true;
+    }
+  };
+
+  onMounted(() => {
+    window.addEventListener('scroll', handleScroll);
+  });
+
+  onUnmounted(() => {
+    window.removeEventListener('scroll', handleScroll);
+  });
 </script>
+
 <template>
-	<section id="experience" style="scroll-margin-top: 100px;" class="pb-[5vh]">
-		<div
-		class="flex flex-col text-stone-300 pb-[5vh] w-full"
-		>
-			<TabbedIndex />
-		</div>
-	</section>
+  <div
+    class="w-full flex flex-col transition-all duration-700"
+    :class="{ 'opacity-0 translate-y-10': !hasScrolled, 'opacity-100 translate-y-0': hasScrolled }"
+    id="experience"
+    ref="experienceRef"
+  >
+    <!-- Each job row -->
+    <div
+      v-for="(job, index) in jobs"
+      :key="index"
+      class="flex justify-between items-center py-8 border-t border-white/70 last:border-b"
+    >
+      <div class="font-oswald text-lg md:text-2xl tracking-widest uppercase text-stone-300">
+        {{ job.employer }}
+      </div>
+      <div class="font-oswald text-base md:text-xl tracking-wider uppercase text-stone-400 text-right ml-4">
+        {{ job.title }}
+      </div>
+    </div>
+  </div>
 </template>
