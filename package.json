@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:clean": "npx tailwindcss --clean && vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },

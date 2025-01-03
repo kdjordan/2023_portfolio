@@ -1,14 +1,14 @@
 <script setup lang="ts">
-  import { introAnimation } from './animations';
   import { onMounted } from 'vue';
+  import { useNavigationAnimation } from './composables/animations/useNavigationAnimation';
   import TopNavigation from './components/TopNavigation.vue';
   import Footer from './components/Footer.vue';
+  import { RouterView } from 'vue-router';
+
+  const { animateIntro } = useNavigationAnimation();
 
   onMounted(() => {
-    let flag: boolean = true;
-    if (flag) {
-      introAnimation();
-    }
+    animateIntro();
   });
 </script>
 
@@ -23,9 +23,6 @@
 </template>
 
 <style>
-  .gradient-text {
-    color: var(--primary-white);
-  }
   #scrollerContainer {
     width: max-content;
     justify-content: center;

@@ -18,8 +18,21 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/plugins/gsap.ts","./.dot/**/*.vue","./dot/**/*.vue",],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/plugins/gsap.ts",
+    "./.dot/**/*.vue",
+    "./dot/**/*.vue"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

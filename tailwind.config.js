@@ -1,10 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    // Example content paths...
-    './public/**/*.html',
-    './src/**/*.{js,jsx,ts,tsx,vue}',
-  ],
+  content: ['./src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -47,6 +43,7 @@ export default {
         display: ['Space Grotesk', 'sans-serif'],
         oswald: ['Oswald', 'sans-serif'],
         geist: ['Geist', 'sans-serif'],
+        arial: ['Arial', 'sans-serif'],
       },
       boxShadow: {
         meteor: '0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em #9FF279',
@@ -62,14 +59,20 @@ export default {
         size5xl: 'clamp(3.81rem, 5.18vi + 2.52rem, 6.66rem)',
         size6xl: 'clamp(4.77rem, 7.48vi + 2.9rem, 8.88rem)',
       },
-      backgroundImage: {
-        gradientRadial: 'radial-gradient(ellipse 80% 50% at 50% -20%,rgba(120,119,198,0.3),transparent)',
-      },
       borderCustom: {
         guides: '1px solid #027333',
       },
       gridTemplateColumns: {
         skills: 'repeat(2, minmax(140px, 200px))',
+      },
+      animation: {
+        fadeIn: 'fadeIn 1s ease-in forwards',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
       },
     },
   },

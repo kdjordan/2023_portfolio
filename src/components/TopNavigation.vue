@@ -1,18 +1,17 @@
 <script setup lang="ts">
-  import Logo from './Logo.vue';
-
   import { ref } from 'vue';
-  import { toggleMobileNav } from '../animations';
+  import { useNavigationAnimation } from '@/composables/animations/useNavigationAnimation';
 
   const isOpen = ref(false);
+  const { toggleMenu } = useNavigationAnimation();
 
   function toggleOpen() {
     isOpen.value = !isOpen.value;
-    toggleMobileNav(isOpen.value);
+    toggleMenu(isOpen.value);
   }
 </script>
 <template>
-  <div class="top-nav fixed top-0 left-0 w-full h-16 font-oswald border-b border-gray-800 bg-bg-primary z-10">
+  <div class="top-nav fixed top-0 left-0 w-full h-16 bg-bg-primary z-10">
     <div
       id="overlay"
       class="fixed top-0 right-0 bg-bg-secondary z-20 w-full h-screen translate-x-[100%]"
@@ -63,14 +62,7 @@
       </ul>
     </div>
     <nav class="flex justify-between px-4 items-center h-full container mx-auto">
-      <div class="nav-left">
-        <h1
-          id="logo"
-          class="text-primary-white text-2xl font-geist"
-        >
-          <Logo />
-        </h1>
-      </div>
+      <div class="nav-left"></div>
       <div
         class="nav-right z-30 cursor-pointer"
         @click="toggleOpen"
