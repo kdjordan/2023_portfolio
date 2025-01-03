@@ -44,7 +44,7 @@ export function introAnimation() {
     ease: 'ease'
     }
   })
-  .to('.top-nav', { borderBottom: '1px solid #9FF279', duration: .5, onComplete: fadeInHero()})
+  .to('.top-nav', { borderBottom: '1px solid #FFFFFF', duration: .5, onComplete: fadeInHero()})
 }
 
 export function fadeInTextBlock(selector: string) {   

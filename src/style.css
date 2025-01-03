@@ -3,6 +3,22 @@
 @tailwind components;
 @tailwind utilities;
 @font-face {
-  font-family: "ADELIA";
-  src: url("./assets/fonts/Geist.otf");
+  font-family: 'ADELIA';
+  src: url('./assets/fonts/Geist.otf');
+}
+
+body {
+  background-color: #0a0a0a; /* Your dark background color */
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom right, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 35px 35px;
+  background-position: 0 0, 17.5px 17.5px;
+  /* Add fade out effect */
+  mask-image: linear-gradient(to bottom right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.1) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
