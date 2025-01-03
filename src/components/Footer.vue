@@ -38,7 +38,7 @@
       </ul>
     </div>
     <div class="text-gray-400 flex justify-center items-center pt-8 text-center">
-      This site was built in 2024 by Kevin Jordan using Vue 3, Tailwind, and GSAP.
+      This site was built in 2025 by Kevin Jordan using Vue 3, Tailwind, and GSAP.
     </div>
   </div>
 </template>
