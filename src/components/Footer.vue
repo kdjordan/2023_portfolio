@@ -1,7 +1,7 @@
 <template>
   <div
     id="footer"
-    class="font-geist border-t border-gray-800 bg-bg-secondary py-8"
+    class="py-8"
   >
     <div>
       <ul class="text-primary-white flex justify-center items-center h-full gap-8">

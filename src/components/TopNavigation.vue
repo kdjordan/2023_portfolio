@@ -11,7 +11,7 @@
   }
 </script>
 <template>
-  <div class="top-nav fixed top-0 left-0 w-full h-16 bg-bg-primary z-10">
+  <div class="top-nav fixed top-0 left-0 w-full h-16 z-10">
     <div
       id="overlay"
       class="fixed top-0 right-0 bg-bg-secondary z-20 w-full h-screen translate-x-[100%]"
@@ -47,7 +47,7 @@
             >contact</a
           >
         </li>
-        <li @click="toggleOpen">
+        <!-- <li @click="toggleOpen">
           <a
             href="./kevin_jordan.pdf"
             target="_blank"
@@ -58,7 +58,7 @@
               RESUME
             </button></a
           >
-        </li>
+        </li> -->
       </ul>
     </div>
     <nav class="flex justify-between px-4 items-center h-full container mx-auto">
@@ -72,7 +72,7 @@
           width="40"
           height="40"
           fill="currentColor"
-          class="text-primary-white"
+          class="text-white"
         >
           <rect
             id="upper"
