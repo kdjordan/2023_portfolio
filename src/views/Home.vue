@@ -18,7 +18,7 @@
 <template>
   <div class="min-h-screen">
     <HomeHero @animation-complete="onHeroComplete" />
-    <div class="about-section opacity-0">
+    <div class="about-section opacity-0 relative z-0">
       <SectionBreaker
         text="The About"
         centerLetter="A"

@@ -21,9 +21,9 @@
       >
         <li @click="toggleOpen">
           <a
-            href="#techs"
+            href="#about"
             class="hover:text-gray-200 transition-colors"
-            >techs</a
+            >about</a
           >
         </li>
         <li @click="toggleOpen">
@@ -33,13 +33,13 @@
             >experience</a
           >
         </li>
-        <li @click="toggleOpen">
+        <!-- <li @click="toggleOpen">
           <a
             href="#projects"
             class="hover:text-gray-200 transition-colors"
             >projects</a
           >
-        </li>
+        </li> -->
         <li @click="toggleOpen">
           <a
             href="#contact"

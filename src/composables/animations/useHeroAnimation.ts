@@ -33,8 +33,8 @@ export function useHeroAnimation() {
   const timeline = gsap.timeline({
     delay: 1.2,
   });
-  let wordIndex = 0;
-  const skillWords = shuffleArray(baseSkillWords);
+  let wordIndex = Math.floor(Math.random() * baseSkillWords.length);
+  const skillWords = [...baseSkillWords];
   const wordTimelines: gsap.core.Timeline[] = [];
 
   const animateHero = () => {
@@ -64,8 +64,11 @@ export function useHeroAnimation() {
           onComplete: () => {
             const wordElement = document.querySelector('#job .word');
             if (wordElement) {
-              wordElement.textContent = skillWords[wordIndex];
-              animateWord(wordElement);
+              const el = wordElement as HTMLElement;
+              el.style.opacity = '0';
+
+              // Start the word animation cycle
+              startWordAnimation(el);
               resolve();
             }
           },
@@ -73,26 +76,27 @@ export function useHeroAnimation() {
     });
   };
 
-  const animateWord = (wordElement: Element, isFirst = false) => {
+  const startWordAnimation = (el: HTMLElement) => {
+    // Set initial word
+    el.textContent = skillWords[wordIndex];
+
+    // Fade in first word
+    gsap.to(el, {
+      opacity: 1,
+      duration: 0.4,
+      onComplete: () => {
+        // Start the cycle with next word after delay
+        setTimeout(() => {
+          wordIndex = (wordIndex + 1) % skillWords.length;
+          animateWord(el);
+        }, 2000);
+      },
+    });
+  };
+
+  const animateWord = (wordElement: Element) => {
     const currentWord = skillWords[wordIndex];
     const el = wordElement as HTMLElement;
-
-    if (isFirst) {
-      el.style.opacity = '0';
-      el.textContent = currentWord;
-
-      timeline.to(el, {
-        opacity: 1,
-        duration: 0.4,
-        onComplete: () => {
-          setTimeout(() => {
-            wordIndex = (wordIndex + 1) % skillWords.length;
-            animateWord(wordElement, false);
-          }, 2000);
-        },
-      });
-      return;
-    }
 
     const wordTimeline = gsap
       .timeline()

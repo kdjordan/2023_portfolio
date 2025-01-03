@@ -4,32 +4,25 @@
     id="about"
     class="w-full flex flex-col transition-all duration-700"
     :class="{ 'opacity-0 translate-y-10': !hasScrolled, 'opacity-100 translate-y-0': hasScrolled }"
+    style="scroll-margin-top: 350px"
   >
     <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold mb-8 text-primary dark:text-primary-dark">About Me</h2>
-
       <div class="grid md:grid-cols-2 gap-8">
         <div class="about-content">
           <p class="text-lg text-gray-700 dark:text-gray-300">
-            Hi there! I'm a passionate developer who loves creating elegant solutions to complex problems. With a keen
-            eye for detail and a commitment to clean code, I transform ideas into reality.
+            Hey! I'm a software architect and developer who thrives on solving complex problems. I specialize in
+            crafting elegant, high-performance web applications using modern technologies. What sets me apart is my attention to detail and my commitment to writing clean, maintainable code
+            that scales.
           </p>
         </div>
 
         <div class="about-content">
           <p class="text-lg text-gray-700 dark:text-gray-300">
-            When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or
-            sharing knowledge with the developer community.
+            Beyond coding, I like to be outside and stay active. I believe the discipline and focus required
+            in sports directly translates to building better software. When I'm not crafting pixel-perfect animations or
+            optimizing performance, you'll find me exploring new technologies or mentoring other developers.
           </p>
         </div>
-      </div>
-
-      <div class="mt-8 text-center">
-        <a
-          href="#contact"
-          class="btn-primary"
-          >Get in Touch</a
-        >
       </div>
     </div>
   </section>
