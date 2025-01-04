@@ -8,7 +8,7 @@ interface Job {
 
 export const jobs: Job[] = [
   {
-    employer: 'V-tell',
+    employer: 'V-tell (present)',
     title : 'VP Wholesale Services',
     brief : 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
     dates : '2019-Present',

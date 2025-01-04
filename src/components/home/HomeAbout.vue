@@ -7,20 +7,15 @@
     style="scroll-margin-top: 350px"
   >
     <div class="container mx-auto px-4">
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="about-content">
-          <p class="text-lg text-gray-700 dark:text-gray-300">
-            Hey! I'm a software architect and developer who thrives on solving complex problems. I specialize in
-            crafting elegant, high-performance web applications using modern technologies. What sets me apart is my attention to detail and my commitment to writing clean, maintainable code
-            that scales.
+      <div class="grid md:grid-cols-1 gap-8">
+        <div class="about-content flex flex-col gap-6">
+          <p class="text-lg dark:text-gray-300">
+            Hey all - thanks for cheking in. As you can see, I'm Kevin and well... this is my site. I'm a
+            business/product/software guy that has been creating things for a minute or two. I really enjoy building
+            things from the ground up and seeing ideas get realized.
           </p>
-        </div>
-
-        <div class="about-content">
-          <p class="text-lg text-gray-700 dark:text-gray-300">
-            Beyond coding, I like to be outside and stay active. I believe the discipline and focus required
-            in sports directly translates to building better software. When I'm not crafting pixel-perfect animations or
-            optimizing performance, you'll find me exploring new technologies or mentoring other developers.
+          <p class="text-lg dark:text-gray-300">
+            I'm currently working in the telecommunications space and participating in the developemnt of a global e-sim product. I;m also engaged in building tools to support the wholesale VOIP market.
           </p>
         </div>
       </div>

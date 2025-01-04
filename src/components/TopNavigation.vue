@@ -11,7 +11,7 @@
   }
 </script>
 <template>
-  <div class="top-nav fixed top-0 left-0 w-full h-16 z-10">
+  <div class="top-nav fixed top-0 left-0 w-full h-16 z-10 backdrop-blur-md bg-black/30">
     <div
       id="overlay"
       class="fixed top-0 right-0 bg-bg-secondary z-20 w-full h-screen translate-x-[100%]"
