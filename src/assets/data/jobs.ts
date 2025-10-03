@@ -8,10 +8,17 @@ interface Job {
 
 export const jobs: Job[] = [
   {
-    employer: 'V-tell (present)',
+    employer: 'BTS',
+    title : 'Director US Domestic',
+    brief : 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
+    dates : 'Sep 2025-Present',
+    highlights: ['Enhanced infrastructure utilization, achieving a 50% reduction in overhead costs.', 'Developed a tax reporting system that decreased staff hours by 25%.', 'Coordinated projects between 3 International Teams.', 'Designed and developed a customer payment portal.']
+  },
+  {
+    employer: 'V-Tell',
     title : 'VP Wholesale Services',
     brief : 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
-    dates : '2019-Present',
+    dates : '2019-Sep 2025',
     highlights: ['Enhanced infrastructure utilization, achieving a 50% reduction in overhead costs.', 'Developed a tax reporting system that decreased staff hours by 25%.', 'Coordinated projects between 3 International Teams.', 'Designed and developed a customer payment portal.']
   },
   {
@@ -44,7 +51,7 @@ export const jobs: Job[] = [
   },
   {
     employer: 'Catalogfinder',
-    title : 'Lead Developer',
+    title : 'Lead Dev',
     brief : 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
     dates : '1998-2000',
     highlights: ['Hired and managed a small engineering team.', 'Conceived, authored, orchestrated, and executed software projects that initially funded the company.']

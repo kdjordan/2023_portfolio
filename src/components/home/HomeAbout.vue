@@ -3,19 +3,31 @@
     ref="aboutRef"
     id="about"
     class="w-full flex flex-col transition-all duration-700"
-    :class="{ 'opacity-0 translate-y-10': !hasScrolled, 'opacity-100 translate-y-0': hasScrolled }"
+    :class="{
+      'opacity-0 translate-y-10': !hasScrolled,
+      'opacity-100 translate-y-0': hasScrolled,
+    }"
     style="scroll-margin-top: 350px"
   >
     <div class="container mx-auto px-4">
       <div class="grid md:grid-cols-1 gap-8">
         <div class="about-content flex flex-col gap-6">
           <p class="text-lg dark:text-gray-300">
-            Hey all - thanks for cheking in. As you can see, I'm Kevin and well... this is my site. I'm a
-            business/product/software guy that has been creating things for a minute or two. I really enjoy building
-            things from the ground up and seeing ideas get realized.
+            Hey, I’m Kevin. I’ve always been a builder — whether that’s
+            companies, products, or tools. Over the years I’ve founded startups,
+            launched side projects, and coached teams, but the common thread has
+            been creating something new from scratch and pushing it out into the
+            world.
           </p>
           <p class="text-lg dark:text-gray-300">
-            I'm currently working in the telecommunications space and participating in the developemnt of a global e-sim product. I;m also engaged in building tools to support the wholesale VOIP market.
+            These days I’m deep in the telecom world — leading U.S. operations
+            at BTS, one of the largest wholesale VoIP carriers — while also
+            building tools that help operators make sense of rates, routing, and
+            strategy.
+          </p>
+          <p class="text-lg dark:text-gray-300">
+            At the end of the day, I’m happiest when I’m creating — taking ideas
+            off the whiteboard and turning them into something real.
           </p>
         </div>
       </div>
@@ -24,28 +36,28 @@
 </template>
 
 <script setup lang="ts">
-  import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted } from "vue";
 
-  const aboutRef = ref<HTMLElement | null>(null);
-  const hasScrolled = ref(false);
+const aboutRef = ref<HTMLElement | null>(null);
+const hasScrolled = ref(false);
 
-  const handleScroll = () => {
-    if (!aboutRef.value) return;
+const handleScroll = () => {
+  if (!aboutRef.value) return;
 
-    const rect = aboutRef.value.getBoundingClientRect();
-    const triggerPoint = window.innerHeight * 0.8;
+  const rect = aboutRef.value.getBoundingClientRect();
+  const triggerPoint = window.innerHeight * 0.8;
 
-    if (rect.top < triggerPoint) {
-      hasScrolled.value = true;
-    }
-  };
+  if (rect.top < triggerPoint) {
+    hasScrolled.value = true;
+  }
+};
 
-  onMounted(() => {
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Check initial position
-  });
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+  handleScroll(); // Check initial position
+});
 
-  onUnmounted(() => {
-    window.removeEventListener('scroll', handleScroll);
-  });
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
